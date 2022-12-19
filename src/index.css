@@ -1,0 +1,43 @@
+/* 
+==================
+Fonts
+==================
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@400;600;700&family=Nunito:wght@400;600;700&display=swap');
+
+/* 
+==================
+Variables 
+==================
+*/
+
+:root {
+  --clr-primary: hsl(227, 49%, 15%);
+  --clr-secondary: hsla(0, 0%, 4%, 0.902);
+  --clr-accent: hsl(266, 94%, 49%);
+  --clr-white: hsl(0, 0%, 100%);
+  --ff-primary: 'Jura', sans-serif;
+  --ff-secondary: 'Nunito', sans-serif;
+  --fw-regular: 400;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+}
+
+/*
+====================
+Resets
+====================
+*/
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+}
