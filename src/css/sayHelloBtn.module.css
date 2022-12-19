@@ -1,10 +1,14 @@
 .container {
+  display: none;
+}
+
+.container.active {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   position: relative;
-  top: 5rem;
+  top: 6.5rem;
 }
 
 .welcome {
@@ -24,4 +28,10 @@
   padding: .5rem 1rem;
   border: 2px solid var(--clr-accent);
   border-radius: 9999px;
+  transition: all .2s ease-in;
+}
+
+.btn:hover {
+  color: var(--clr-white);
+  background-color: var(--clr-accent);
 }
