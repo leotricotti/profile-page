@@ -1,14 +1,26 @@
-.btnContainer {
-  position: absolute;
-  left: 37%;
-  top: 7rem;
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  top: 5rem;
+}
+
+.welcome {
+  color: var(--clr-primary);
+  font-family: var(--ff-secondary);
+  padding: 1rem;
+  display: block;
 }
 
 .btn {
-  color: var(--clr-accent);
   text-decoration: none;
+
+  color: var(--clr-accent);
   font-family: var(--ff-secondary);
   font-size: 1.125rem;
+
   padding: .5rem 1rem;
   border: 2px solid var(--clr-accent);
   border-radius: 9999px;

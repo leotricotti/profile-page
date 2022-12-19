@@ -2,7 +2,8 @@ import styles from "../css/sayHelloBtn.module.css";
 
 function SayHelloBtn() {
   return (
-    <div className={styles.btnContainer}>
+    <div className={styles.container}>
+      <p className={styles.welcome}>Welcome...</p>
       <a href="/" className={styles.btn}>
         Say Hello
       </a>
