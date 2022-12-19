@@ -1,16 +1,16 @@
-import HeaderLogo from "./HeaderLogo";
+import NavBarLogo from "./NavBarLogo";
 import NavToggle from "./NavToggle";
 import SayHelloBtn from "./SayHelloBtn";
-import styles from "../css/header.module.css";
+import styles from "../css/navBar.module.css";
 
-function Header() {
+function NavBar() {
   return (
     <div className={styles.headerContainer}>
-      <HeaderLogo />
-      <NavToggle />
+      <NavBarLogo />
       <SayHelloBtn />
+      <NavToggle />
     </div>
   );
 }
 
-export default Header;
+export default NavBar;
