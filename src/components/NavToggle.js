@@ -1,11 +1,31 @@
+import { useState } from "react";
 import styles from "../css/navToggle.module.css";
 
-function NavToggle() {
+function NavToggle({ handleClick }) {
+  const [isActive, setIsActive] = useState(false);
+
   return (
-    <div className={styles.navToggle}>
-      <div className={styles.lineOne}></div>
-      <div className={styles.lineTwo}></div>
-      <div className={styles.lineThree}></div>
+    <div
+      className={styles.navToggle}
+      onClick={() => {
+        setIsActive(!isActive);
+      }}
+    >
+      <div
+        className={
+          isActive ? `${styles.line}  ${styles.isActive}` : `${styles.line}`
+        }
+      ></div>
+      <div
+        className={
+          isActive ? `${styles.line}  ${styles.isActive}` : `${styles.line}`
+        }
+      ></div>
+      <div
+        className={
+          isActive ? `${styles.line}  ${styles.isActive}` : `${styles.line}`
+        }
+      ></div>
     </div>
   );
 }

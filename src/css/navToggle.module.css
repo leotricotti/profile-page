@@ -6,17 +6,30 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+
+
 }
 
-.lineOne,
-.lineTwo,
-.lineThree {
+.line {
   width: 1rem;
   height: 1px;
   background-color: var(--clr-primary);
   margin-bottom: .23rem;
+  transition: all .2s ease;
 }
 
 .lineThree {
   margin-bottom: 0;
+}
+
+.line:nth-child(1).isActive {
+  transform: rotate(45deg);
+}
+
+.line:nth-child(2).isActive {
+  display: none;
+}
+
+.line:nth-child(3).isActive {
+  transform: translateY(-5px) rotate(-45deg);
 }
