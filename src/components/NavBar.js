@@ -1,16 +1,37 @@
+import { useEffect, useState } from "react";
 import NavBarLogo from "./NavBarLogo";
-import NavToggle from "./NavToggle";
 import SayHelloBtn from "./SayHelloBtn";
 import styles from "../css/navBar.module.css";
 
 function NavBar() {
-  // const [toggle, isToggle] = useState(false);
+  const [toggle, setToggle] = useState(false);
+  const [isActive, setIsActive] = useState(false);
+
+  useEffect(() => {
+    setToggle(() => !isActive);
+  }, [isActive]);
 
   return (
     <div className={styles.headerContainer}>
       <NavBarLogo />
-      <SayHelloBtn />
-      <NavToggle />
+      <SayHelloBtn toggle={toggle} />
+      <div className={styles.navToggle} onClick={() => setIsActive(!isActive)}>
+        <div
+          className={
+            isActive ? `${styles.line}  ${styles.isActive}` : `${styles.line}`
+          }
+        ></div>
+        <div
+          className={
+            isActive ? `${styles.line}  ${styles.isActive}` : `${styles.line}`
+          }
+        ></div>
+        <div
+          className={
+            isActive ? `${styles.line}  ${styles.isActive}` : `${styles.line}`
+          }
+        ></div>
+      </div>
     </div>
   );
 }

@@ -1,8 +1,14 @@
 import styles from "../css/sayHelloBtn.module.css";
 
-function SayHelloBtn() {
+function SayHelloBtn({ toggle }) {
+  console.log(toggle);
+
   return (
-    <div className={styles.container}>
+    <div
+      className={
+        toggle ? `${styles.container}` : `${styles.container}  ${styles.active}`
+      }
+    >
       <p className={styles.welcome}>Welcome...</p>
       <a href="/" className={styles.btn}>
         Say Hello
