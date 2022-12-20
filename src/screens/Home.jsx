@@ -1,11 +1,11 @@
-import NavBar from "../components/NavBar";
-import Title from "../components/Title";
+import NavBarContainer from "../components/NavBarContainer";
+import HeroSectionContainer from "../components/HeroSectionContainer";
 
 function Home() {
   return (
     <>
-      <NavBar />
-      <Title />
+      <NavBarContainer />
+      <HeroSectionContainer />
     </>
   );
 }
