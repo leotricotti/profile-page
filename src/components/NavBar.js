@@ -12,7 +12,7 @@ function NavBar() {
   }, [isActive]);
 
   return (
-    <div className={styles.headerContainer}>
+    <div className={styles.navContainer}>
       <NavBarLogo />
       <SayHelloBtn toggle={toggle} />
       <div className={styles.navToggle} onClick={() => setIsActive(!isActive)}>

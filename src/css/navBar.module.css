@@ -1,13 +1,13 @@
-.headerContainer {
+.navContainer {
   width: 100%;
-  height: 5.25rem;
+  height: 6rem;
   padding: 0 1.2rem;
   margin: 1rem 0;
 
   position: relative;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .navToggle {
