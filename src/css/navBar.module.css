@@ -1,6 +1,13 @@
+/* Logo */
+.navBarLogo {
+  width: 3rem;
+}
+
+/* NavBar */
+
 .navContainer {
   width: 100%;
-  height: 6rem;
+  height: auto;
   padding: 0 1.2rem;
   margin: 1rem 0;
 
@@ -38,4 +45,47 @@
 
 .line:nth-child(3).isActive {
   transform: translateY(-5px) rotate(-45deg);
+}
+
+/* SayHello */
+
+.container {
+  opacity: 0;
+  transition: all .2s ease-in;
+}
+
+.container.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 8rem 0 6rem 0;
+  opacity: 1;
+  transition: all .2s ease-in;
+}
+
+.welcome {
+  color: var(--clr-primary);
+  font-family: var(--ff-secondary);
+  padding: 1rem;
+  display: block;
+  transition: all 5s ease-in;
+}
+
+.btn {
+  text-decoration: none;
+
+  color: var(--clr-accent);
+  font-family: var(--ff-secondary);
+  font-size: 1.125rem;
+
+  padding: .5rem 1rem;
+  border: 2px solid var(--clr-accent);
+  border-radius: 9999px;
+  transition: all .2s ease-in;
+}
+
+.btn:hover {
+  color: var(--clr-white);
+  background-color: var(--clr-accent);
 }

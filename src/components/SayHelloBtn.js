@@ -1,4 +1,4 @@
-import styles from "../css/sayHelloBtn.module.css";
+import styles from "../css/navBar.module.css";
 
 function SayHelloBtn({ toggle }) {
   return (
