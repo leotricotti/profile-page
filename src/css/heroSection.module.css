@@ -1,7 +1,30 @@
+.heroSectionContainer {
+  width: 100%;
+  height: fit-content;
+  padding: 1rem;
+}
+
+.titleContainer {
+  margin-bottom: 1.5rem;
+}
+
 .title {
+  color: var(--clr-primary);
   width: 100%;
   font-family: var(--ff-primary);
   font-size: 2rem;
   font-weight: var(--fw-bold);
+  text-align: center;
+}
+
+.subtitleContainer {
+  margin-bottom: 1.5rem;
+}
+
+.subtitle {
+  color: var(--clr-secondary);
+  font-family: var(--ff-secondary);
+  font-weight: var(--fw-semibold);
+  font-size: 1.25rem;
   text-align: center;
 }
