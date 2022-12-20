@@ -1,4 +1,3 @@
-import { useState } from "react";
 import NavBarLogo from "./NavBarLogo";
 import NavToggle from "./NavToggle";
 import SayHelloBtn from "./SayHelloBtn";
