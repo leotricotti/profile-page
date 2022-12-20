@@ -1,6 +1,6 @@
 import styles from "../css/heroSection.module.css";
 
-function HeroSectionSubtitle() {
+function HeroSubtitle() {
   return (
     <div className={styles.subtitleContainer}>
       <p className={styles.subtitle}>
@@ -10,4 +10,4 @@ function HeroSectionSubtitle() {
   );
 }
 
-export default HeroSectionSubtitle;
+export default HeroSubtitle;

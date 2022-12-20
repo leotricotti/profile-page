@@ -1,12 +1,14 @@
-import HeroSectionTitle from "./HeroSectionTitle";
-import HeroSectionSubtitle from "./HeroSectionSubtitle";
+import HeroTitle from "./HeroTitle";
+import HeroSubtitle from "./HeroSubtitle";
+import HeroAvatar from "./HeroAvatar";
 import styles from "../css/heroSection.module.css";
 
 function HeroSectionContainer() {
   return (
     <div className={styles.heroSectionContainer}>
-      <HeroSectionTitle />
-      <HeroSectionSubtitle />
+      <HeroTitle />
+      <HeroSubtitle />
+      <HeroAvatar />
     </div>
   );
 }
