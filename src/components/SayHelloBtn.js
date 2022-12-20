@@ -1,8 +1,6 @@
 import styles from "../css/sayHelloBtn.module.css";
 
 function SayHelloBtn({ toggle }) {
-  console.log(toggle);
-
   return (
     <div
       className={

@@ -1,16 +1,16 @@
 .container {
   opacity: 0;
+  visibility: hidden;
 }
 
 .container.active {
   opacity: 1;
-  height: 5rem;
+  visibility: visible;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  position: relative;
-  top: 6.5rem;
+  margin-top: 10rem;
   transition: all .2s ease-in;
 }
 

@@ -1,6 +1,5 @@
 .title {
   width: 100%;
-  height: fit-content;
   font-family: var(--ff-primary);
   font-size: 2rem;
   font-weight: var(--fw-bold);
