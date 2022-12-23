@@ -1,7 +1,15 @@
-import Home from "./screens/Home";
+import HeroSection from "./components/HeroSection";
+import NavBar from "./components/NavBarContainer";
+import PersonalInfo from "./components/PersonalInfo";
 
 function App() {
-  return <Home />;
+  return (
+    <>
+      <NavBar />
+      <HeroSection />
+      <PersonalInfo />
+    </>
+  );
 }
 
 export default App;

@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
-import NavBarLogo from "./NavBarLogo";
-import SayHelloBtn from "./SayHelloBtn";
+import logo from "../assets/img/logo/logo.webp";
 import styles from "../css/navBar.module.css";
 
 function NavBar() {
@@ -12,9 +11,22 @@ function NavBar() {
   }, [isActive]);
 
   return (
-    <div className={styles.navContainer}>
-      <NavBarLogo />
-      <SayHelloBtn toggle={toggle} />
+    <nav className={styles.navContainer}>
+      <img src={logo} alt="Designer logo" className={styles.navBarLogo} />
+
+      <div
+        className={
+          toggle
+            ? `${styles.container}`
+            : `${styles.container}  ${styles.active}`
+        }
+      >
+        <p className={styles.welcome}>Welcome...</p>
+        <a href="/" className={styles.btn}>
+          Say Hello
+        </a>
+      </div>
+
       <div className={styles.navToggle} onClick={() => setIsActive(!isActive)}>
         <div
           className={
@@ -32,7 +44,7 @@ function NavBar() {
           }
         ></div>
       </div>
-    </div>
+    </nav>
   );
 }
 
