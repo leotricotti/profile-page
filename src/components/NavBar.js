@@ -10,6 +10,10 @@ function NavBar() {
     setToggle(() => !isActive);
   }, [isActive]);
 
+  let className = isActive
+    ? `${styles.line}  ${styles.isActive}`
+    : `${styles.line}`;
+
   return (
     <nav className={styles.navContainer}>
       <img src={logo} alt="Designer logo" className={styles.navBarLogo} />
@@ -28,21 +32,9 @@ function NavBar() {
       </div>
 
       <div className={styles.navToggle} onClick={() => setIsActive(!isActive)}>
-        <div
-          className={
-            isActive ? `${styles.line}  ${styles.isActive}` : `${styles.line}`
-          }
-        ></div>
-        <div
-          className={
-            isActive ? `${styles.line}  ${styles.isActive}` : `${styles.line}`
-          }
-        ></div>
-        <div
-          className={
-            isActive ? `${styles.line}  ${styles.isActive}` : `${styles.line}`
-          }
-        ></div>
+        <div className={className}></div>
+        <div className={className}></div>
+        <div className={className}></div>
       </div>
     </nav>
   );
