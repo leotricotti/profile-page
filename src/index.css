@@ -15,6 +15,7 @@ Variables
 :root {
   --clr-primary: hsl(227, 49%, 15%);
   --clr-secondary: hsla(0, 0%, 4%, 0.902);
+  --clr-lightblue: hsl(210, 100%, 55%);
   --clr-accent: hsl(266, 94%, 49%);
   --clr-hover: hsl(210, 100%, 40%);
   --clr-icon: hsl(160, 76%, 64%);
@@ -47,4 +48,8 @@ img {
 
 html {
   height: 100%;
+}
+
+body {
+  position: relative;
 }

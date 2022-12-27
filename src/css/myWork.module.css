@@ -1,0 +1,30 @@
+.myWorkContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+
+  position: absolute;
+  bottom: 2.5rem;
+  padding: 0 1rem;
+}
+
+.myWorkTitle {
+  color: var(--clr-primary);
+  font-family: var(--ff-secondary);
+  font-size: 1.5rem;
+  padding-bottom: 1rem;
+}
+
+.myWorkText,
+.link {
+  color: var(--clr-primary);
+  font-family: var(--ff-primary);
+  font-size: 1.25rem;
+  font-weight: var(--fw-semibold);
+}
+
+.link {
+  color: var(--clr-lightblue);
+}

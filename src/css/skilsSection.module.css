@@ -1,3 +1,10 @@
+.skilsContainer {
+  position: relative;
+  z-index: 999;
+  top: -12rem;
+  left: 0;
+}
+
 .skilsContainer>section:nth-of-type(1) {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
@@ -16,10 +23,6 @@
 
 .skils {
   background-color: var(--clr-white);
-  position: relative;
-  z-index: 999;
-  top: -12rem;
-  left: 0;
   display: flex;
   justify-content: center;
   flex-direction: column;
