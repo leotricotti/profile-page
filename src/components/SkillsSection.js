@@ -2,11 +2,15 @@ import styles from "../css/skilsSection.module.css";
 
 function SkilsSection({ data }) {
   return (
-    <>
+    <div className={styles.skilsContainer}>
       {data.map((constant) => (
-        <section key={constant.id} className={styles.skilsContainer}>
+        <section key={constant.id} className={styles.skils}>
           <div className={styles.iconContainer}>
-            <img src={constant.icon} alt={constant.title} />
+            <img
+              className={styles.icon}
+              src={constant.icon}
+              alt={constant.title}
+            />
           </div>
 
           <div className={styles.header}>
@@ -18,15 +22,17 @@ function SkilsSection({ data }) {
             <h3 className={styles.bodyTitle}>{constant.hability}</h3>
             <p className={styles.bodyDescription}>{constant.habilityList}</p>
             <h3 className={styles.bodyTitle}>{constant.tools}</h3>
-            {constant.toolsList.map((toolList) => (
-              <ul className={styles.listContainer} key={toolList.index}>
-                <li className={styles.item}>{toolList}</li>
-              </ul>
-            ))}
+            <ul className={styles.listContainer}>
+              {constant.toolsList.map((toolList) => (
+                <li key={toolList} className={styles.item}>
+                  {toolList}
+                </li>
+              ))}
+            </ul>
           </div>
         </section>
       ))}
-    </>
+    </div>
   );
 }
 

@@ -1,6 +1,6 @@
-import artist from "../img/icons/artist.svg";
-import developer from "../img/icons/developer.svg";
-import designer from "../img/icons/designer.svg";
+import developer from "../img/icons/developer.png";
+import designer from "../img/icons/designer.png";
+import artist from "../img/icons/artist.png";
 
 const skils = [
   {
@@ -9,7 +9,7 @@ const skils = [
     title: "Frontend Developer",
     desc: "I like to code things from scratch, and enjoy bringing ideas to life in the browser.",
     hability: "Languages I speak:",
-    habilityList: "HTML, Pug, Slim, CSS, Sass, Git",
+    habilityList: "HTML, CSS, Sass, Git, JavaScript, React",
     tools: "Dev Tools:",
     toolsList: [
       "Atom ",

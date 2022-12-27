@@ -4,7 +4,7 @@ Fonts
 ==================
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Jura:wght@400;600;700&family=Nunito:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@700&family=Nunito:wght@400;600;700&display=swap');
 
 /* 
 ==================
@@ -13,13 +13,15 @@ Variables
 */
 
 :root {
-  --clr-primary: #141c38;
+  --clr-primary: hsl(227, 49%, 15%);
   --clr-secondary: hsla(0, 0%, 4%, 0.902);
   --clr-accent: hsl(266, 94%, 49%);
   --clr-hover: hsl(210, 100%, 40%);
+  --clr-icon: hsl(160, 76%, 64%);
   --clr-white: hsl(0, 0%, 100%);
-  --ff-primary: 'Jura', sans-serif;
-  --ff-secondary: 'Nunito', sans-serif;
+  --clr-border: hsl(220, 56%, 94%);
+  --ff-primary: 'Nunito', sans-serif;
+  --ff-secondary: 'Exo', sans-serif;
   --fw-regular: 400;
   --fw-semibold: 600;
   --fw-bold: 700;

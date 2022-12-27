@@ -1,5 +1,7 @@
 .heroSectionContainer {
   width: 100%;
+  position: relative;
+  top: .25rem;
 }
 
 .titleContainer {
@@ -9,7 +11,7 @@
 .title {
   color: var(--clr-primary);
   width: 100%;
-  font-family: var(--ff-primary);
+  font-family: var(--ff-secondary);
   font-size: 2rem;
   font-weight: var(--fw-bold);
   text-align: center;
@@ -21,7 +23,7 @@
 
 .subtitle {
   color: var(--clr-secondary);
-  font-family: var(--ff-secondary);
+  font-family: var(--ff-primary);
   font-weight: var(--fw-semibold);
   font-size: 1.25rem;
   text-align: center;
