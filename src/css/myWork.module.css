@@ -1,13 +1,12 @@
 .myWorkContainer {
   width: 100%;
+  height: 10vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
-
-  position: absolute;
-  bottom: 2.5rem;
-  padding: 0 1rem;
+  position: relative;
+  bottom: 7rem;
 }
 
 .myWorkTitle {

@@ -1,5 +1,68 @@
 .container {
   width: 100%;
   background-color: var(--clr-accent);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  padding: 3rem 1rem;
+}
 
+.developerLogo {
+  width: 3.25rem;
+  height: 3.25rem;
+}
+
+.text {
+  color: var(--clr-white);
+  font-family: var(--ff-secondary);
+  font-size: 1.5rem;
+  font-weight: 200;
+  padding: 3rem 1rem 0 1rem;
+  text-align: center;
+}
+
+.copyright {
+  display: flex;
+  align-items: center;
+  padding-top: 3rem;
+}
+
+.copyright,
+.copyright>span {
+  color: var(--clr-white);
+  font-family: var(--ff-primary);
+}
+
+.copyright>span::before {
+  content: "\00a9";
+  font-size: 1.5rem;
+  padding: 0 .2rem;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+}
+
+.footer>span {
+  color: var(--clr-white);
+  font-family: var(--ff-primary);
+}
+
+.reactLogo {
+  width: 7rem;
+}
+
+@media(min-width: 768px) {
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .text {
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
 }

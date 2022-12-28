@@ -5,12 +5,19 @@ import styles from "../css/footer.module.css";
 function Footer() {
   return (
     <footer className={styles.container}>
-      <img src={logo} alt="Designer logo" />
-      <h3 className={styles.text}>
-        Living, learning, & leveling up one day at a time.
-      </h3>
-      <p className={styles.copyright}>Handcrafted by Leonardo Tricotti</p>
-      <img src={react} alt="React Logo" />
+      <img src={logo} alt="Designer logo" className={styles.developerLogo} />
+      <div className={styles.grid}>
+        <h3 className={styles.text}>
+          Living, learning, & leveling up one day at a time.
+        </h3>
+      </div>
+      <p className={styles.copyright}>
+        Handcrafted by <span></span> Leonardo Tricotti
+      </p>
+      <div className={styles.footer}>
+        <span>Made with</span>
+        <img src={react} alt="React Logo" className={styles.reactLogo} />
+      </div>
     </footer>
   );
 }
