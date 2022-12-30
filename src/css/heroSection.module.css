@@ -1,7 +1,7 @@
 .heroSectionContainer {
   width: 100%;
   position: relative;
-  padding-top: 2rem;
+  padding-top: 5rem;
   max-width: 1344px;
   margin: auto;
 }
@@ -44,4 +44,24 @@
   margin: auto;
   position: relative;
   bottom: -.3rem;
+}
+
+@media(min-width: 768px) {
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .subtitle {
+    font-size: 1.5rem;
+  }
+
+  .avatar {
+    width: 13.125rem;
+  }
+}
+
+@media(min-width: 1024px) {
+  .title {
+    font-size: 3rem;
+  }
 }

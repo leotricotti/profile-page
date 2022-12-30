@@ -22,8 +22,13 @@
   font-family: var(--ff-primary);
   font-size: 1.25rem;
   font-weight: var(--fw-semibold);
+  text-decoration: none;
 }
 
 .link {
   color: var(--clr-lightblue);
+}
+
+.link:hover {
+  color: #0066cd;
 }

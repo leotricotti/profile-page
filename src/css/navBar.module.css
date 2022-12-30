@@ -8,6 +8,7 @@
 
 .navBarLogo {
   width: 3.5rem;
+  cursor: pointer;
 }
 
 .navToggle {
@@ -76,16 +77,18 @@
 }
 
 .btn>a {
-  text-decoration: none;
   color: var(--clr-accent);
+  text-decoration: none;
   font-family: var(--ff-primary);
   font-size: 1.125rem;
 }
 
-.btn:hover,
-.btn>a:hover {
-  color: var(--clr-white);
+.btn:hover {
   background-color: var(--clr-accent);
+}
+
+.btn:hover * {
+  color: var(--clr-white);
 }
 
 @media(min-width: 1024px) {

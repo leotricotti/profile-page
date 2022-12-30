@@ -8,7 +8,7 @@ function MyWork() {
         Here are a few past design projects I've worked on. Want to know me?
       </p>
       <a href="/" className={styles.link}>
-        Email me
+        Email me.
       </a>
     </section>
   );

@@ -49,10 +49,11 @@
 .footer>span {
   color: var(--clr-white);
   font-family: var(--ff-primary);
+  line-height: 3;
 }
 
 .reactLogo {
-  width: 7rem;
+  width: 5rem;
 }
 
 @media(min-width: 768px) {
