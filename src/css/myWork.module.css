@@ -13,7 +13,7 @@
   color: var(--clr-primary);
   font-family: var(--ff-secondary);
   font-size: 1.5rem;
-  padding-bottom: 1rem;
+  padding: 1rem;
 }
 
 .myWorkText,

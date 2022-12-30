@@ -1,30 +1,22 @@
-/* Logo */
-.navBarLogo {
-  width: 3rem;
-}
-
-/* NavBar */
-
 .navContainer {
   width: 100%;
   height: auto;
-  padding: 0 1.2rem;
-  margin: 1rem 0;
-
+  padding: 0 1rem;
   position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  top: 2rem;
+}
+
+.navBarLogo {
+  width: 3.5rem;
 }
 
 .navToggle {
   width: 2rem;
   height: 2rem;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  position: absolute;
+  top: 1rem;
+  right: 0;
 }
 
 .line {
@@ -32,6 +24,7 @@
   height: 1px;
   background-color: var(--clr-primary);
   margin-bottom: .23rem;
+  transform-origin: center;
   transition: all .2s ease;
 }
 
@@ -47,19 +40,18 @@
   transform: translateY(-5px) rotate(-45deg);
 }
 
-/* SayHello */
-
 .container {
-  opacity: 0;
-  transition: all .2s ease-in;
-}
-
-.container.active {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin: 8rem 0 6rem 0;
+  opacity: 0;
+  height: 0;
+  transition: all .2s ease-in;
+}
+
+.container.active {
+  height: 8rem;
   opacity: 1;
   transition: all .2s ease-in;
 }
@@ -68,24 +60,50 @@
   color: var(--clr-primary);
   font-family: var(--ff-primary);
   padding: 1rem;
-  display: block;
+  font-weight: var(--fw-semibold);
   transition: all 5s ease-in;
 }
 
 .btn {
-  text-decoration: none;
-
-  color: var(--clr-accent);
-  font-family: var(--ff-primary);
-  font-size: 1.125rem;
-
+  background-color: transparent;
   padding: .5rem 1rem;
   border: 2px solid var(--clr-accent);
   border-radius: 9999px;
   transition: all .2s ease-in;
+  cursor: pointer;
+  position: relative;
+  z-index: 5;
 }
 
-.btn:hover {
+.btn>a {
+  text-decoration: none;
+  color: var(--clr-accent);
+  font-family: var(--ff-primary);
+  font-size: 1.125rem;
+}
+
+.btn:hover,
+.btn>a:hover {
   color: var(--clr-white);
   background-color: var(--clr-accent);
+}
+
+@media(min-width: 1024px) {
+  .navContainer {
+    top: 2rem;
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  .line {
+    display: none;
+  }
+
+  .container {
+    opacity: 1;
+    position: absolute;
+    right: 1rem;
+    top: 2.2rem;
+    flex-direction: row;
+  }
 }

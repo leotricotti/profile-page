@@ -5,17 +5,11 @@ import styles from "../css/heroSection.module.css";
 function HeroSection() {
   return (
     <section className={styles.heroSectionContainer}>
-      <div className={styles.titleContainer}>
+      <div className={styles.heroBody}>
         <h1 className={styles.title}>Designer, Artist & Frontend Developer</h1>
-      </div>
-
-      <div className={styles.subtitleContainer}>
         <p className={styles.subtitle}>
           I design and code beautifully simple things, and I love what I do.
         </p>
-      </div>
-
-      <div className={styles.avatarContainer}>
         <img src={logo} alt="Developer avatar" className={styles.avatar} />
       </div>
 

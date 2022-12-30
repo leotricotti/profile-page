@@ -8,7 +8,7 @@ function Footer() {
       <img src={logo} alt="Designer logo" className={styles.developerLogo} />
       <div className={styles.grid}>
         <h3 className={styles.text}>
-          Living, learning, & leveling up one day at a time.
+          Living, learning, & leveling up <br /> one day at a time.
         </h3>
       </div>
       <p className={styles.copyright}>

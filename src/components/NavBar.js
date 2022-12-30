@@ -26,9 +26,9 @@ function NavBar() {
         }
       >
         <p className={styles.welcome}>Welcome...</p>
-        <a href="/" className={styles.btn}>
-          Say Hello
-        </a>
+        <button className={styles.btn}>
+          <a href="/">Say Hello</a>
+        </button>
       </div>
 
       <div className={styles.navToggle} onClick={() => setIsActive(!isActive)}>

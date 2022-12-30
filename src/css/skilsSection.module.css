@@ -99,8 +99,10 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    margin: 0 1rem;
+    max-width: 1344px;
+    margin: 0 auto;
     border-radius: 1rem;
+    padding: 0 1.5rem;
   }
 
   .skilsContainer>section:nth-of-type(1) {

@@ -1,11 +1,17 @@
 .heroSectionContainer {
   width: 100%;
   position: relative;
-  top: .25rem;
+  padding-top: 2rem;
+  max-width: 1344px;
+  margin: auto;
 }
 
-.titleContainer {
-  margin-bottom: 1.5rem;
+.heroBody {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 1rem;
 }
 
 .title {
@@ -15,10 +21,7 @@
   font-size: 2rem;
   font-weight: var(--fw-bold);
   text-align: center;
-}
-
-.subtitleContainer {
-  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 
 .subtitle {
@@ -27,20 +30,18 @@
   font-weight: var(--fw-semibold);
   font-size: 1.25rem;
   text-align: center;
-}
-
-.avatarContainer {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin: 2rem 0;
+  padding-bottom: 1.5rem;
 }
 
 .avatar {
-  width: 10rem;
-  margin-top: 2rem;
+  width: 9.5rem;
+  margin: 2rem 0;
 }
 
 .footerContainer {
-  margin: 4rem 1rem 0 1rem;
+  padding: 0 1rem;
+  max-width: 860px;
+  margin: auto;
+  position: relative;
+  bottom: -.3rem;
 }

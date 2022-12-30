@@ -1,6 +1,6 @@
 .sectionContainer {
   background-color: var(--clr-accent);
-  padding: 2rem 1rem 15rem 1rem;
+  padding: 2rem 1rem 17rem 1rem;
 }
 
 .infoTitle {
@@ -8,7 +8,7 @@
   font-size: 1.5rem;
   font-family: var(--ff-secondary);
   text-align: center;
-  padding: 1.5rem 0;
+  padding: 2rem 0;
 }
 
 .personalInfo {
@@ -16,4 +16,23 @@
   font-family: var(--ff-primary);
   font-size: 1.25rem;
   text-align: center;
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+@media(min-width: 768px) {
+  .sectionContainer {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+  }
+
+  .infoTitle {
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
+
+  .personalInfo {
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
 }
