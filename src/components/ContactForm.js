@@ -1,5 +1,5 @@
 function Contact() {
-  return <h1>Contact Form</h1>;
+  return;
 }
 
 export default Contact;
