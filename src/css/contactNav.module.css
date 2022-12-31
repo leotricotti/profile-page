@@ -1,13 +1,14 @@
 .navContainer {
   width: 100%;
-  padding: 1rem 0;
+  padding: 1.5rem 0;
   border-bottom: 1px solid var(--clr-border);
   display: flex;
   align-items: center;
 }
 
 .navLogo {
-  width: 2.9rem;
+  width: 3.5rem;
+  height: auto;
   cursor: pointer;
   margin: 0 .5rem;
 }

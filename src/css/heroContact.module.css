@@ -1,0 +1,25 @@
+.heroContainer {
+  width: 100%;
+  height: 13.5rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.heroAvatar {
+  width: 5.25rem;
+  align-self: center;
+  position: absolute;
+  top: -3rem;
+}
+
+.heroTitle {
+  width: 100%;
+  color: var(--clr-primary);
+  font-family: var(--ff-secondary);
+  font-weight: var(--fw-regular);
+  font-size: 1.8rem;
+  text-align: center;
+  padding: 0 2rem;
+}
