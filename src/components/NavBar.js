@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
 import logo from "../assets/img/logo/logo.webp";
 import styles from "../css/navBar.module.css";
 
@@ -27,7 +28,7 @@ function NavBar() {
       >
         <p className={styles.welcome}>Welcome...</p>
         <button className={styles.btn}>
-          <a href="/">Say Hello</a>
+          <NavLink to={"contact"}>Say Hello</NavLink>
         </button>
       </div>
 
