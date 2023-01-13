@@ -19,6 +19,8 @@
 }
 
 .field>input {
+  font-family: var(--ff-primary);
+  font-size: 1.4rem;
   padding: .8rem;
   margin-bottom: 2rem;
   border: 1px solid var(--clr-border);
@@ -43,4 +45,31 @@
 .submit:hover {
   color: var(--clr-white);
   background: var(--clr-accent);
+}
+
+@media(min-width: 768px) {
+  .formContainer {
+    width: 45rem;
+    margin: auto;
+  }
+
+  .flex {
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+  }
+
+  .field {
+    width: 100%;
+  }
+
+  .field>textarea {
+    width: 100%;
+    margin: auto;
+  }
+
+  .submit {
+    width: 35%;
+    align-self: center;
+  }
 }
