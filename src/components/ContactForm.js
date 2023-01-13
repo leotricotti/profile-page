@@ -1,6 +1,11 @@
+import { useEffect } from "react";
 import styles from "../css/contactForm.module.css";
 
 function ContactForm() {
+  useEffect(() => {
+    document.title = "Contact | Leonardo Tricotti";
+  });
+
   return (
     <section>
       <form action="" className={styles.formContainer}>
