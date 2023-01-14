@@ -17,7 +17,9 @@ function NavBar() {
 
   return (
     <nav className={styles.navContainer}>
-      <img src={logo} alt="Designer logo" className={styles.navBarLogo} />
+      <NavLink to="/">
+        <img src={logo} alt="Designer logo" className={styles.navBarLogo} />
+      </NavLink>
 
       <div
         className={
