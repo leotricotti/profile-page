@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import HeroSection from "../components/HeroSection";
 import NavBar from "../components/NavBar";
 import PersonalInfo from "../components/PersonalInfo";
@@ -7,6 +8,11 @@ import Footer from "../components/Footer";
 import skils from "../assets/data/data";
 
 function Home() {
+  useEffect(() => {
+    document.title =
+      "Leonardo Tricotti | Designer, Artist & Frontend Developer";
+  });
+
   return (
     <>
       <NavBar />

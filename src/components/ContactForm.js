@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import styles from "../css/contactForm.module.css";
 
 function ContactForm() {
@@ -22,10 +22,6 @@ function ContactForm() {
     );
     e.target.reset();
   }
-
-  useEffect(() => {
-    document.title = "Contact | Leonardo Tricotti";
-  });
 
   return (
     <section>
