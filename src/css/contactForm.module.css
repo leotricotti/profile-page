@@ -28,6 +28,8 @@
 
 .field>textarea {
   border: 1px solid var(--clr-border);
+  font-family: var(--ff-primary);
+  font-size: 1.4rem;
 }
 
 .submit {
