@@ -1,31 +1,48 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
+import emailjs from "emailjs-com";
 import styles from "../css/contactForm.module.css";
 
 function ContactForm() {
-  const [data, setData] = useState({
+  const form = useRef();
+
+  const [sendData, setSendData] = useState({
     name: "",
     email: "",
     message: "",
   });
 
   function handleInputChange(e) {
-    setData({
-      ...data,
+    setSendData({
+      ...sendData,
       [e.target.name]: e.target.value,
     });
   }
 
   function handleSubmit(e) {
     e.preventDefault();
-    console.log(
-      "enviando datos..." + data.name + " " + data.email + " " + data.message
-    );
+
+    emailjs
+      .sendForm(
+        "YOUR_SERVICE_ID",
+        "YOUR_TEMPLATE_ID",
+        form.current,
+        "YOUR_PUBLIC_KEY"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+
     e.target.reset();
   }
 
   return (
     <section>
-      <form className={styles.formContainer} onSubmit={handleSubmit}>
+      <form className={styles.formContainer} onSubmit={handleSubmit} ref={form}>
         <div className={styles.flex}>
           <div className={styles.field}>
             <label className={styles.formLabel}>Name</label>
