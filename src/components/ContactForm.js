@@ -52,7 +52,7 @@ function ContactForm() {
           <label className={styles.formLabel}>Message</label>
           <textarea
             name="message"
-            rows={15}
+            rows={7}
             required
             className={styles.formInput}
             onChange={handleInputChange}

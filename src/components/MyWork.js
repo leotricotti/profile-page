@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import styles from "../css/myWork.module.css";
 
 function MyWork() {
@@ -7,9 +8,9 @@ function MyWork() {
       <p className={styles.myWorkText}>
         Here are a few past design projects I've worked on. Want to know me?
       </p>
-      <a href="/" className={styles.link}>
+      <NavLink to={"/contact"} className={styles.link}>
         Email me.
-      </a>
+      </NavLink>
     </section>
   );
 }
