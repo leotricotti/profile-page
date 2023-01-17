@@ -1,6 +1,6 @@
-import developer from "../img/icons/developer.png";
-import designer from "../img/icons/designer.png";
-import artist from "../img/icons/artist.png";
+import developer from "../img/icons/developer.webp";
+import designer from "../img/icons/designer.webp";
+import artist from "../img/icons/artist.webp";
 
 const skils = [
   {

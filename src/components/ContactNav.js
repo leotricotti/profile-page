@@ -1,7 +1,7 @@
 import logo from "../assets/img/logo/logo.webp";
-import undo from "../assets/img/icons/undo.png";
+import undo from "../assets/img/icons/undo.webp";
+import close from "../assets/img/icons/close.webp";
 import { NavLink } from "react-router-dom";
-import close from "../assets/img/icons/close.png";
 import styles from "../css/contactNav.module.css";
 
 function ContactNav() {
