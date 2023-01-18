@@ -1,10 +1,11 @@
 import { useState, useRef } from "react";
-import emailjs from "emailjs-com";
+import emailjs from "@emailjs/browser";
+import { NavLink } from "react-router-dom";
 import styles from "../css/contactForm.module.css";
 
 function ContactForm() {
   const form = useRef();
-
+  const [isSubmit, setIsSubmit] = useState(false);
   const [sendData, setSendData] = useState({
     name: "",
     email: "",
@@ -23,10 +24,10 @@ function ContactForm() {
 
     emailjs
       .sendForm(
-        "YOUR_SERVICE_ID",
-        "YOUR_TEMPLATE_ID",
+        "service_19go1dk",
+        "template_amd2rms",
         form.current,
-        "YOUR_PUBLIC_KEY"
+        "5LFaJE5ILWbwd4jOW"
       )
       .then(
         (result) => {
@@ -37,49 +38,53 @@ function ContactForm() {
         }
       );
 
+    setIsSubmit(true);
     e.target.reset();
   }
 
+  console.log(isSubmit);
+
   return (
-    <section>
-      <form className={styles.formContainer} onSubmit={handleSubmit} ref={form}>
-        <div className={styles.flex}>
+    <form className={styles.formContainer} onSubmit={handleSubmit} ref={form}>
+      {isSubmit ? (
+        <NavLink to={"/response"} />
+      ) : (
+        <div>
+          <div className={styles.flex}>
+            <div className={styles.field}>
+              <label className={styles.formLabel}>Name</label>
+              <input
+                type="text"
+                name="name"
+                className={styles.formInput}
+                onChange={handleInputChange}
+              />
+            </div>
+            <div className={styles.field}>
+              <label className={styles.formLabel}>Email</label>
+              <input
+                type="email"
+                name="email"
+                className={styles.formInput}
+                onChange={handleInputChange}
+              />
+            </div>
+          </div>
           <div className={styles.field}>
-            <label className={styles.formLabel}>Name</label>
-            <input
-              type="text"
-              name="name"
-              required
+            <label className={styles.formLabel}>Message</label>
+            <textarea
+              name="message"
+              rows={7}
               className={styles.formInput}
               onChange={handleInputChange}
             />
           </div>
-          <div className={styles.field}>
-            <label className={styles.formLabel}>Email</label>
-            <input
-              type="email"
-              name="email"
-              required
-              className={styles.formInput}
-              onChange={handleInputChange}
-            />
-          </div>
+          <button className={styles.submit} type="submit">
+            Submit
+          </button>
         </div>
-        <div className={styles.field}>
-          <label className={styles.formLabel}>Message</label>
-          <textarea
-            name="message"
-            rows={7}
-            required
-            className={styles.formInput}
-            onChange={handleInputChange}
-          />
-        </div>
-        <button className={styles.submit} type="submit">
-          Submit
-        </button>
-      </form>
-    </section>
+      )}
+    </form>
   );
 }
 

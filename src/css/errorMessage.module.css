@@ -1,0 +1,75 @@
+.errorContainer {
+  width: 70%;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
+}
+
+.errorIcon {
+  width: 5.625rem;
+  height: auto;
+}
+
+.errorTitle {
+  font-family: var(--ff-primary);
+  text-align: center;
+  line-height: 1.3;
+  padding: 1rem 0;
+}
+
+.footerContainer {
+  width: 100%;
+  background: var(--clr-accent);
+}
+
+.footerContainer {
+  width: 100%;
+  background-color: var(--clr-accent);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.footerLogo {
+  width: 3.25rem;
+  height: auto;
+}
+
+.reactLogo {
+  width: 2rem;
+}
+
+.copyright {
+  display: flex;
+  align-items: center;
+  padding-top: 3rem;
+}
+
+.copyright,
+.copyright>span {
+  color: var(--clr-white);
+  font-family: var(--ff-primary);
+}
+
+.copyright>span::before {
+  content: "\00a9";
+  font-size: 1.5rem;
+  padding: 0 .2rem;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+}
+
+.footer>span {
+  color: var(--clr-white);
+  font-family: var(--ff-primary);
+  line-height: 3;
+}
