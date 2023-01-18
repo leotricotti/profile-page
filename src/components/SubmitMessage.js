@@ -1,7 +1,7 @@
 import icon from "../assets/img/icons/error.webp";
 import logo from "../assets/img/logo/logo-white.webp";
 import react from "../assets/img/footer/React-icon.svg";
-import styles from "../css/errorMessage.module.css";
+import styles from "../css/submitMessage.module.css";
 
 function SubmitMessage() {
   return (
