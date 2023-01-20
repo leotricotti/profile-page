@@ -5,11 +5,7 @@ export const FormContext = createContext();
 export function FormContextProvider({ children }) {
   const [formData, setFormData] = useState(false);
 
-  const submitForm = (formData) => {
-    setFormData(formData);
-  };
-
-  const value = [submitForm, formData];
+  const value = [formData];
 
   return <FormContext.Provider value={value}>{children}</FormContext.Provider>;
 }

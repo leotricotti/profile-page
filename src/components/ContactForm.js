@@ -40,9 +40,12 @@ function ContactForm() {
       );
 
     setIsSubmit(true);
-    submitForm(isSubmit);
     e.target.reset();
   }
+
+  let submit = submitForm();
+
+  console.log(submit);
 
   return (
     <form className={styles.formContainer} onSubmit={handleSubmit} ref={form}>
