@@ -1,4 +1,4 @@
-import { useEffect, useContext } from "react";
+import { useEffect, useContext, useState } from "react";
 import ContactForm from "../components/ContactForm";
 import HeroContact from "../components/HeroContact";
 import SubmitMessage from "../components/SubmitMessage";
@@ -9,14 +9,18 @@ function Contact() {
   useEffect(() => {
     document.title = "Contact | Leonardo Tricotti";
   });
-
+  const [show, setShow] = useState(false);
   const [formData] = useContext(FormContext);
-
-  console.log(formData);
+  useEffect(() => {
+    const timeOut = setTimeout(() => {
+      setShow(formData);
+    }, 1000);
+    return () => clearTimeout(timeOut);
+  }, [formData]);
 
   return (
     <>
-      {formData ? (
+      {show ? (
         <SubmitMessage />
       ) : (
         <div>
