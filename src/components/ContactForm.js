@@ -5,7 +5,7 @@ import styles from "../css/contactForm.module.css";
 
 function ContactForm() {
   const form = useRef();
-  const { submitForm } = useContext(FormContext);
+  const [formData, setFormData] = useContext(FormContext);
   const [isSubmit, setIsSubmit] = useState(false);
   const [sendData, setSendData] = useState({
     name: "",
@@ -40,12 +40,9 @@ function ContactForm() {
       );
 
     setIsSubmit(true);
+    setFormData({ ...formData, formdata: isSubmit });
     e.target.reset();
   }
-
-  let submit = submitForm();
-
-  console.log(submit);
 
   return (
     <form className={styles.formContainer} onSubmit={handleSubmit} ref={form}>
