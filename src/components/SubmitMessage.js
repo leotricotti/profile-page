@@ -1,4 +1,4 @@
-import icon from "../assets/img/icons/confirm.webp";
+import ConfirmSubmit from "./ConfirmSubmit";
 import react from "../assets/img/footer/React-icon.svg";
 import ContactButtons from "./ContactButons";
 import styles from "../css/submitMessage.module.css";
@@ -13,13 +13,7 @@ function SubmitMessage() {
       <div className={styles.buttonsContainer}>
         <ContactButtons handleClick={handleClick} />
       </div>
-      <div className={styles.submitContainer}>
-        <img src={icon} alt="Confirm icon" className={styles.submitIcon} />
-        <h1 className={styles.submitTitle}>Thank you for contacting me!</h1>
-        <p className={styles.submitText}>
-          I will reach out to you as soon as possible.
-        </p>
-      </div>
+      <ConfirmSubmit />
       <footer className={styles.footerContainer}>
         <p className={styles.copyright}>
           Handcrafted by <span></span> Leonardo Tricotti

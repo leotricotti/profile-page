@@ -15,8 +15,6 @@ function Contact() {
     setShow(formData);
   }, [formData]);
 
-  console.log(show);
-
   useEffect(() => {
     document.title = "Contact | Leonardo Tricotti";
   });
