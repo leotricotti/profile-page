@@ -3,25 +3,49 @@ import ContactForm from "../components/ContactForm";
 import HeroContact from "../components/HeroContact";
 import SubmitMessage from "../components/SubmitMessage";
 import ContactNav from "../components/ContactNav";
+import Spinner from "../components/Spinner";
 import { FormContext } from "../components/FormContext";
 
 function Contact() {
+  const [formData] = useContext(FormContext);
+  const [show, setShow] = useState(formData);
+  const [isLoading, setIsloading] = useState(false);
+
+  useEffect(() => {
+    setShow(formData);
+  }, [formData]);
+
   useEffect(() => {
     document.title = "Contact | Leonardo Tricotti";
   });
-  const [show, setShow] = useState(false);
-  const [formData] = useContext(FormContext);
+
   useEffect(() => {
+    if (show) {
+      showSpinner();
+    }
+  }, [show]);
+
+  function showSpinner() {
+    setIsloading(true);
     const timeOut = setTimeout(() => {
-      setShow(formData);
+      setShow(true);
+      setIsloading(false);
     }, 1000);
     return () => clearTimeout(timeOut);
-  }, [formData]);
+  }
+
+  function spinnerActive() {
+    if (isLoading) {
+      return <Spinner />;
+    } else {
+      return <SubmitMessage />;
+    }
+  }
 
   return (
     <>
       {show ? (
-        <SubmitMessage />
+        spinnerActive()
       ) : (
         <div>
           <ContactNav />
