@@ -1,12 +1,13 @@
 .submitContainer {
   width: 70%;
-  height: 73vh;
+  height: 87.3vh;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   flex-direction: column;
   margin: auto;
-  padding-top: 7rem;
+  padding-top: 3rem;
+  position: relative;
 }
 
 .buttonsContainer {
@@ -48,6 +49,9 @@
   align-items: center;
   justify-content: center;
   padding: 1rem 1rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 
 .reactLogo {

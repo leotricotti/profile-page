@@ -9,7 +9,7 @@ function SubmitMessage() {
   }
 
   return (
-    <main className={styles.container}>
+    <main>
       <div className={styles.buttonsContainer}>
         <ContactButtons handleClick={handleClick} />
       </div>
