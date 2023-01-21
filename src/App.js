@@ -1,17 +1,17 @@
 import { Routes, Route } from "react-router-dom";
 import Home from "./screens/Home";
 import Contact from "./screens/Contact";
-import { FormContextProvider } from "./components/FormContext";
+import { ContactContextProvider } from "./components/ContactContext";
 
 function App() {
   return (
     <>
-      <FormContextProvider>
+      <ContactContextProvider>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
-      </FormContextProvider>
+      </ContactContextProvider>
     </>
   );
 }

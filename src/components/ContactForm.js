@@ -1,11 +1,11 @@
 import { useState, useRef, useContext } from "react";
 import emailjs from "@emailjs/browser";
-import { FormContext } from "./FormContext";
+import { ContactContext } from "./ContactContext";
 import styles from "../css/contactForm.module.css";
 
 function ContactForm() {
   const form = useRef();
-  const [formData, setFormData] = useContext(FormContext);
+  const [formData, setFormData] = useContext(ContactContext);
   const [isSubmit, setIsSubmit] = useState(false);
   const [sendData, setSendData] = useState({
     name: "",
