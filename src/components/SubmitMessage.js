@@ -14,7 +14,7 @@ function SubmitMessage() {
         <ContactButtons handleClick={handleClick} />
       </div>
       <div className={styles.submitContainer}>
-        <img src={icon} alt="Error icon" className={styles.submitIcon} />
+        <img src={icon} alt="Confirm icon" className={styles.submitIcon} />
         <h1 className={styles.submitTitle}>Thank you for contacting me!</h1>
         <p className={styles.submitText}>
           I will reach out to you as soon as possible.

@@ -11,7 +11,7 @@
   width: 3.5rem;
   height: auto;
   cursor: pointer;
-  margin-left: 5rem;
+  margin-left: 2rem;
 }
 
 .undoBtn {
@@ -27,7 +27,18 @@
   background: transparent;
 }
 
+@media(min-width: 768px) {
+  .navLogo {
+    margin-left: 5rem;
+  }
+}
+
 @media(min-width: 1024px) {
+  .navContainer {
+    max-width: 1200px;
+    margin: auto;
+  }
+
   .btnContainer {
     display: flex;
     align-items: center;
