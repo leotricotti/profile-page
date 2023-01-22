@@ -61,6 +61,10 @@
 }
 
 @media(min-width: 1024px) {
+  .heroSectionContainer {
+    padding-top: 2rem;
+  }
+
   .title {
     font-size: 3rem;
   }
