@@ -1,7 +1,7 @@
 import { useEffect, useContext, useState } from "react";
 import { ContactContext } from "../components/ContactContext";
 import ContactForm from "../components/ContactForm";
-import HeroContact from "../components/HeroContact";
+import ContactHero from "../components/ContactHero";
 import SubmitContact from "../components/SubmitContact";
 import ContactNav from "../components/ContactNav";
 import Spinner from "../components/Spinner";
@@ -49,7 +49,7 @@ function Contact() {
       ) : (
         <div>
           <ContactNav />
-          <HeroContact />
+          <ContactHero />
           <ContactForm />
         </div>
       )}

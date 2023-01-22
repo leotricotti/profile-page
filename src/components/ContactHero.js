@@ -1,7 +1,7 @@
 import logo from "../assets/img/avatar/avatar.svg";
-import styles from "../css/heroContact.module.css";
+import styles from "../css/contactHero.module.css";
 
-function HeroContact() {
+function ContactHero() {
   return (
     <section className={styles.heroContainer}>
       <img src={logo} alt="Designer avatar" className={styles.heroAvatar} />
@@ -12,4 +12,4 @@ function HeroContact() {
   );
 }
 
-export default HeroContact;
+export default ContactHero;
