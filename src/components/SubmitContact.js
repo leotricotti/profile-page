@@ -6,6 +6,7 @@ import ContactButtons from "./ContactButons";
 import SubmitMessage from "./SubmitMessage";
 import SubmitFooter from "./SubmitFooter";
 import styles from "../css/submitMessage.module.css";
+import { useEffect } from "react";
 
 function SubmitContact() {
   const [contactData] = useContext(ContactContext);
@@ -15,23 +16,30 @@ function SubmitContact() {
     window.location.reload();
   }
 
+  useEffect(() => {
+    setIsSubmit(contactData);
+  }, [contactData]);
+
   return (
     <main>
       <div className={styles.buttonsContainer}>
         <ContactButtons handleClick={handleClick} />
       </div>
-      <SubmitMessage
-        icon={confirmIcon}
-        alt={"Confirm icon"}
-        title={"Thank you for contacting me!"}
-        text={"I will reach out to you as soon as possible."}
-      />
-      <SubmitMessage
-        icon={errorIcon}
-        alt={"Error icon"}
-        title={"Somenthing went wrong!"}
-        text={"Please try again latter."}
-      />
+      {isSubmit ? (
+        <SubmitMessage
+          icon={confirmIcon}
+          alt={"Confirm icon"}
+          title={"Thank you for contacting me!"}
+          text={"I will reach out to you as soon as possible."}
+        />
+      ) : (
+        <SubmitMessage
+          icon={errorIcon}
+          alt={"Error icon"}
+          title={"Somenthing went wrong!"}
+          text={"Please try again latter."}
+        />
+      )}
       <SubmitFooter />
     </main>
   );
