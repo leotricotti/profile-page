@@ -6,7 +6,7 @@ function HeroSection() {
   return (
     <section className={styles.heroSectionContainer}>
       <div className={styles.heroBody}>
-        <h1 className={styles.title}>Designer, Artist & Frontend Developer</h1>
+        <h1 className={styles.title}>Frontend Developer, Designer & Artist</h1>
         <p className={styles.subtitle}>
           I design and code beautifully simple things, and I love what I do.
         </p>
