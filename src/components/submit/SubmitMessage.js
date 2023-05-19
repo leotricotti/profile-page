@@ -1,4 +1,4 @@
-import styles from "../css/submitMessage.module.css";
+import styles from "./submitMessage.module.css";
 
 function SubmitMessage({ icon, alt, title, text }) {
   return (

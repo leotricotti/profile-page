@@ -1,7 +1,7 @@
-import undo from "../assets/img/icons/undo.webp";
-import close from "../assets/img/icons/close.webp";
+import undo from "../../assets/img/icons/undo.webp";
+import close from "../../assets/img/icons/close.webp";
 import { NavLink } from "react-router-dom";
-import styles from "../css/contactNav.module.css";
+import styles from "./contactButtons.module.css";
 
 function ContactButtons({ handleClick }) {
   return (

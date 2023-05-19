@@ -2,7 +2,7 @@ import { useState, useRef, useContext } from "react";
 import emailjs from "@emailjs/browser";
 import { FormContext } from "../../context/FormContext";
 import SubmitContact from "../submit/SubmitContact";
-import styles from "../css/contactForm.module.css";
+import styles from "./contactForm.module.css";
 
 function ContactForm() {
   const form = useRef();

@@ -1,5 +1,5 @@
-import react from "../assets/img/footer/React-icon.svg";
-import styles from "./submitFootrer.modue.css";
+import react from "../../assets/img/footer/React-icon.svg";
+import styles from "./submitFootrer.module.css";
 
 function SubmitFooter() {
   return (

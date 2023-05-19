@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { FormContext } from "../../context/FormContext";
-import confirmIcon from "../assets/img/icons/confirm.webp";
-import errorIcon from "../assets/img/icons/error.webp";
+import confirmIcon from "../../assets/img/icons/confirm.webp";
+import errorIcon from "../../assets/img/icons/error.webp";
 import ContactButtons from "../contact/ContactButons";
 import SubmitMessage from "./SubmitMessage";
 import SubmitFooter from "./SubmitFooter";

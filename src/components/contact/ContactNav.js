@@ -1,7 +1,7 @@
-import logo from "../assets/img/logo/logo.webp";
+import logo from "../../assets/img/logo/logo.webp";
 import ContactButtons from "./ContactButons";
 import { NavLink } from "react-router-dom";
-import styles from "../css/contactNav.module.css";
+import styles from "./contactNav.module.css";
 
 function ContactNav() {
   function handleClick() {

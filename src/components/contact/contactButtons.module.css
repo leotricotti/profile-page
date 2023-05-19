@@ -1,0 +1,40 @@
+.undoBtn {
+  display: none;
+}
+
+.closeBtn {
+  display: none;
+}
+
+.btn {
+  border: transparent;
+  background: transparent;
+}
+
+@media (min-width: 1024px) {
+  .navContainer {
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  .btnContainer {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-right: 5rem;
+  }
+
+  .undoBtn {
+    display: inline-block;
+    width: 1.5rem;
+    height: auto;
+    cursor: pointer;
+  }
+
+  .closeBtn {
+    display: inline-block;
+    width: 1.25rem;
+    height: auto;
+    cursor: pointer;
+  }
+}

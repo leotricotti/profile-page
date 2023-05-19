@@ -1,5 +1,5 @@
-import logo from "../assets/img/avatar/avatar.svg";
-import styles from "../css/contactHero.module.css";
+import logo from "../../assets/img/avatar/avatar.svg";
+import styles from "./contactHero.module.css";
 
 function ContactHero() {
   return (
