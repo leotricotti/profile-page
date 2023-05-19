@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
 import { BrowserRouter } from "react-router-dom";
-import { FormContextProvider } from "./components/FormContext";
+import { FormContextProvider } from "./context/FormContext";
 import { LanguageProvider } from "./context/LanguageContext";
 
 import "./index.css";

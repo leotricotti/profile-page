@@ -1,5 +1,4 @@
-import { useEffect, useContext, useState } from "react";
-import { ContactContext } from "../components/ContactContext";
+import { useEffect, useState } from "react";
 import ContactForm from "../components/ContactForm";
 import ContactHero from "../components/ContactHero";
 import SubmitContact from "../components/SubmitContact";
@@ -7,18 +6,8 @@ import ContactNav from "../components/ContactNav";
 import Spinner from "../components/Spinner";
 
 function Contact() {
-  const [contactData] = useContext(ContactContext);
-  const [show, setShow] = useState(contactData);
+  const [show, setShow] = useState(false);
   const [isLoading, setIsloading] = useState(false);
-
-  useEffect(() => {
-<<<<<<< HEAD
-    setShow(formData);
-  }, [formData]);
-=======
-    setShow(contactData);
-  }, [contactData]);
->>>>>>> 0bfd86b2d45367e1410edb28c94ee54ddb90e8c9
 
   useEffect(() => {
     document.title = "Contact | Leonardo Tricotti";

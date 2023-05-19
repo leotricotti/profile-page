@@ -1,24 +1,18 @@
-import { useState, useContext } from "react";
-import { ContactContext } from "./ContactContext";
+import { useContext } from "react";
+import { FormContext } from '../context/FormContext';
 import confirmIcon from "../assets/img/icons/confirm.webp";
 import errorIcon from "../assets/img/icons/error.webp";
 import ContactButtons from "./ContactButons";
 import SubmitMessage from "./SubmitMessage";
 import SubmitFooter from "./SubmitFooter";
 import styles from "../css/submitMessage.module.css";
-import { useEffect } from "react";
 
 function SubmitContact() {
-  const [contactData] = useContext(ContactContext);
-  const [isSubmit, setIsSubmit] = useState(false);
+const { isSubmit } = useContext(FormContext);
 
   function handleClick() {
     window.location.reload();
   }
-
-  useEffect(() => {
-    setIsSubmit(contactData);
-  }, [contactData]);
 
   return (
     <main>
