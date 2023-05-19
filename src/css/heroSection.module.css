@@ -1,8 +1,8 @@
 .heroSectionContainer {
   width: 100%;
   position: relative;
-  padding-top: 5rem;
-  max-width: 1344px;
+  padding-top: .5rem;
+  max-width: 1200px;
   margin: auto;
 }
 
@@ -61,6 +61,10 @@
 }
 
 @media(min-width: 1024px) {
+  .heroSectionContainer {
+    padding-top: 2rem;
+  }
+
   .title {
     font-size: 3rem;
   }

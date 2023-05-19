@@ -1,5 +1,5 @@
 import logo from "../assets/img/logo/logo-white.webp";
-import react from "../assets/img/react-logo/react-logo.png";
+import react from "../assets/img/react-logo/react-logo.webp";
 import styles from "../css/footer.module.css";
 
 function Footer() {

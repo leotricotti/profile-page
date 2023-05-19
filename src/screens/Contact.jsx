@@ -1,19 +1,24 @@
 import { useEffect, useContext, useState } from "react";
+import { ContactContext } from "../components/ContactContext";
 import ContactForm from "../components/ContactForm";
-import HeroContact from "../components/HeroContact";
-import SubmitMessage from "../components/SubmitMessage";
+import ContactHero from "../components/ContactHero";
+import SubmitContact from "../components/SubmitContact";
 import ContactNav from "../components/ContactNav";
 import Spinner from "../components/Spinner";
-import { FormContext } from "../components/FormContext";
 
 function Contact() {
-  const [formData] = useContext(FormContext);
-  const [show, setShow] = useState(formData);
+  const [contactData] = useContext(ContactContext);
+  const [show, setShow] = useState(contactData);
   const [isLoading, setIsloading] = useState(false);
 
   useEffect(() => {
+<<<<<<< HEAD
     setShow(formData);
   }, [formData]);
+=======
+    setShow(contactData);
+  }, [contactData]);
+>>>>>>> 0bfd86b2d45367e1410edb28c94ee54ddb90e8c9
 
   useEffect(() => {
     document.title = "Contact | Leonardo Tricotti";
@@ -38,7 +43,7 @@ function Contact() {
     if (isLoading) {
       return <Spinner />;
     } else {
-      return <SubmitMessage />;
+      return <SubmitContact />;
     }
   }
 
@@ -49,7 +54,7 @@ function Contact() {
       ) : (
         <div>
           <ContactNav />
-          <HeroContact />
+          <ContactHero />
           <ContactForm />
         </div>
       )}
