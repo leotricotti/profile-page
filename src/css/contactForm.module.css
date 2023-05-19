@@ -1,14 +1,3 @@
-.submitContact {
-  width: 100%;
-  height: auto;
-  opacity: 0;
-  transition: all 5s ease-in;
-};
-
-.showContact {
-  opacity: 1;
-}
-
 .formContainer {
   width: 100%;
   padding: 2rem;

@@ -44,9 +44,7 @@ function ContactForm() {
   }
 
   return isSubmit ? (
-    <div className={`${styles.submitContact} ${isSubmit ? styles.showContact : ''}`}>
     <SubmitContact />
-</div>
   ) : (
     <form className={styles.formContainer} onSubmit={handleSubmit} ref={form}>
       <div className={styles.flex}>

@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { FormContext } from '../context/FormContext';
+import { FormContext } from "../context/FormContext";
 import confirmIcon from "../assets/img/icons/confirm.webp";
 import errorIcon from "../assets/img/icons/error.webp";
 import ContactButtons from "./ContactButons";
@@ -8,14 +8,18 @@ import SubmitFooter from "./SubmitFooter";
 import styles from "../css/submitMessage.module.css";
 
 function SubmitContact() {
-const { isSubmit } = useContext(FormContext);
+  const { isSubmit } = useContext(FormContext);
 
   function handleClick() {
     window.location.reload();
   }
 
   return (
-    <main className={styles.submitContainer} >
+    <main
+      className={`${styles.submitContainer} ${
+        isSubmit ? styles.showMessage : ""
+      }`}
+    >
       <div className={styles.buttonsContainer}>
         <ContactButtons handleClick={handleClick} />
       </div>
