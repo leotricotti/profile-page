@@ -6,27 +6,31 @@
   flex-direction: column;
 }
 
+.displayNone {
+  display: none;
+}
+
 .field {
   display: flex;
   flex-direction: column;
-  gap: .5rem;
+  gap: 0.5rem;
 }
 
-.field>label {
+.field > label {
   color: var(--clr-formText);
   font-family: var(--ff-secondary);
   font-size: 1.1rem;
 }
 
-.field>input {
+.field > input {
   font-family: var(--ff-primary);
   font-size: 1.4rem;
-  padding: .8rem;
+  padding: 0.8rem;
   margin-bottom: 2rem;
   border: 1px solid var(--clr-border);
 }
 
-.field>textarea {
+.field > textarea {
   border: 1px solid var(--clr-border);
   font-family: var(--ff-primary);
   font-size: 1.4rem;
@@ -37,12 +41,12 @@
   color: var(--clr-accent);
   font-family: var(--ff-primary);
   font-size: 1.25rem;
-  padding: .8rem 0;
+  padding: 0.8rem 0;
   border-radius: 9999px;
   margin: 3rem 0;
   background-color: transparent;
   border: 1.5px solid var(--clr-accent);
-  transition: all .3s ease-in;
+  transition: all 0.3s ease-in;
 }
 
 .submit:hover {
@@ -50,7 +54,7 @@
   background: var(--clr-accent);
 }
 
-@media(min-width: 768px) {
+@media (min-width: 768px) {
   .formContainer {
     width: 45rem;
     margin: auto;
@@ -66,7 +70,7 @@
     width: 100%;
   }
 
-  .field>textarea {
+  .field > textarea {
     width: 100%;
     margin: auto;
   }

@@ -43,43 +43,50 @@ function ContactForm() {
     e.target.reset();
   }
 
-  return isSubmit ? (
-    <SubmitContact />
-  ) : (
-    <form className={styles.formContainer} onSubmit={handleSubmit} ref={form}>
-      <div className={styles.flex}>
+  return (
+    <>
+      {isSubmit && <SubmitContact />}
+      <form
+        className={`${styles.formContainer} ${
+          isSubmit ? styles.displayNone : ""
+        }`}
+        onSubmit={handleSubmit}
+        ref={form}
+      >
+        <div className={styles.flex}>
+          <div className={styles.field}>
+            <label className={styles.formLabel}>Name</label>
+            <input
+              type="text"
+              name="name"
+              className={styles.formInput}
+              onChange={handleInputChange}
+            />
+          </div>
+          <div className={styles.field}>
+            <label className={styles.formLabel}>Email</label>
+            <input
+              type="email"
+              name="email"
+              className={styles.formInput}
+              onChange={handleInputChange}
+            />
+          </div>
+        </div>
         <div className={styles.field}>
-          <label className={styles.formLabel}>Name</label>
-          <input
-            type="text"
-            name="name"
+          <label className={styles.formLabel}>Message</label>
+          <textarea
+            name="message"
+            rows={7}
             className={styles.formInput}
             onChange={handleInputChange}
           />
         </div>
-        <div className={styles.field}>
-          <label className={styles.formLabel}>Email</label>
-          <input
-            type="email"
-            name="email"
-            className={styles.formInput}
-            onChange={handleInputChange}
-          />
-        </div>
-      </div>
-      <div className={styles.field}>
-        <label className={styles.formLabel}>Message</label>
-        <textarea
-          name="message"
-          rows={7}
-          className={styles.formInput}
-          onChange={handleInputChange}
-                  />
-      </div>
-      <button className={styles.submit} type="submit">
-        Submit
-      </button>
-    </form>
+        <button className={styles.submit} type="submit">
+          Submit
+        </button>
+      </form>
+    </>
   );
 }
 

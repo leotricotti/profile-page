@@ -15,31 +15,31 @@ function SubmitContact() {
   }
 
   return (
-    <main
-      className={`${styles.submitContainer} ${
-        isSubmit ? styles.showMessage : ""
-      }`}
-    >
-      <div className={styles.buttonsContainer}>
-        <ContactButtons handleClick={handleClick} />
-      </div>
-      {isSubmit ? (
-        <SubmitMessage
-          icon={confirmIcon}
-          alt={"Confirm icon"}
-          title={"Thank you for contacting me!"}
-          text={"I will reach out to you as soon as possible."}
-        />
-      ) : (
-        <SubmitMessage
-          icon={errorIcon}
-          alt={"Error icon"}
-          title={"Somenthing went wrong!"}
-          text={"Please try again latter."}
-        />
-      )}
-      <SubmitFooter />
-    </main>
+    <div className={styles.wrapper}>
+      <section
+        className={`${styles.submitContainer} ${isSubmit ? styles.active : ""}`}
+      >
+        <div className={styles.buttonsContainer}>
+          <ContactButtons handleClick={handleClick} />
+        </div>
+        {isSubmit ? (
+          <SubmitMessage
+            icon={confirmIcon}
+            alt={"Confirm icon"}
+            title={"Thank you for contacting me!"}
+            text={"I will reach out to you as soon as possible."}
+          />
+        ) : (
+          <SubmitMessage
+            icon={errorIcon}
+            alt={"Error icon"}
+            title={"Somenthing went wrong!"}
+            text={"Please try again latter."}
+          />
+        )}
+        <SubmitFooter />
+      </section>
+    </div>
   );
 }
 
