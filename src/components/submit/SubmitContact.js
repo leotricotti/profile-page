@@ -1,11 +1,11 @@
 import { useContext } from "react";
-import { FormContext } from "../context/FormContext";
+import { FormContext } from "../../context/FormContext";
 import confirmIcon from "../assets/img/icons/confirm.webp";
 import errorIcon from "../assets/img/icons/error.webp";
-import ContactButtons from "./ContactButons";
+import ContactButtons from "../contact/ContactButons";
 import SubmitMessage from "./SubmitMessage";
 import SubmitFooter from "./SubmitFooter";
-import styles from "../css/submitMessage.module.css";
+import styles from "./submitContact.module.css";
 
 function SubmitContact() {
   const { isSubmit } = useContext(FormContext);

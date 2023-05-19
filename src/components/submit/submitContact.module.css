@@ -1,0 +1,36 @@
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--clr-white);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.submitContainer {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--clr-white);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  animation: opacity 0.5s ease-in-out;
+}
+
+.buttonsContainer {
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,48 @@
+.footerContainer {
+  width: 100%;
+  height: 6.5rem;
+  background-color: #242739;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 1rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.copyright {
+  display: flex;
+  align-items: center;
+  padding-top: 0.5rem;
+}
+
+.copyright,
+.copyright > span {
+  color: var(--clr-white);
+  font-family: var(--ff-primary);
+}
+
+.copyright > span::before {
+  content: "\00a9";
+  font-size: 1.5rem;
+  padding: 0 0.2rem;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+}
+
+.footer > span {
+  color: var(--clr-white);
+  font-family: var(--ff-primary);
+  line-height: 3;
+}
+
+.reactLogo {
+  width: 2rem;
+  height: auto;
+  margin: 0 0.5rem;
+}

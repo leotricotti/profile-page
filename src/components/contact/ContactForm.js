@@ -1,7 +1,7 @@
 import { useState, useRef, useContext } from "react";
 import emailjs from "@emailjs/browser";
-import { FormContext } from "../context/FormContext";
-import SubmitContact from "./SubmitContact";
+import { FormContext } from "../../context/FormContext";
+import SubmitContact from "../submit/SubmitContact";
 import styles from "../css/contactForm.module.css";
 
 function ContactForm() {
