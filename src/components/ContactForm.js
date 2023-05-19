@@ -12,7 +12,6 @@ function ContactForm() {
     email: "",
     message: "",
   });
-
   function handleInputChange(e) {
     setSendData({
       ...sendData,
@@ -48,7 +47,7 @@ function ContactForm() {
     <form className={styles.formContainer} onSubmit={handleSubmit} ref={form}>
       <div className={styles.flex}>
         <div className={styles.field}>
-          <label className={styles.formLabel}>Name</label>
+          <label className={styles.formLabel}>'Name'</label>
           <input
             type="text"
             name="name"
