@@ -15,7 +15,7 @@ const { isSubmit } = useContext(FormContext);
   }
 
   return (
-    <main>
+    <main className={styles.submitContainer} >
       <div className={styles.buttonsContainer}>
         <ContactButtons handleClick={handleClick} />
       </div>
