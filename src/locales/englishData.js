@@ -1,5 +1,26 @@
 const spanishData = [
   {
+    contact: [
+      {
+        form: [
+          {
+            id: "1",
+            label: "Name",
+            label2: "Email",
+            label3: "Message",
+            submit: "Submit",
+          },
+        ],
+        hero: [
+          {
+            id: "1",
+            title:
+              "Thanks for taking the time to reach out. How can I help you today?",
+          },
+        ],
+      },
+    ],
+
     submit: [
       {
         contact: [
@@ -11,6 +32,7 @@ const spanishData = [
             text2: "Please try again latter.",
           },
         ],
+
         footer: [
           {
             id: "1",
@@ -22,7 +44,7 @@ const spanishData = [
       },
     ],
 
-    contact: [
+    home: [
       {
         personalInfo: [
           {
@@ -31,6 +53,7 @@ const spanishData = [
             text: "Since beginning my journey as a frontend developer over 4 years ago, I've done remote work for agencies, consulted for startups, and collaborated with talented people to create digital products for both business and consumer use. I'm quietly confident, naturally curious, and perpetually working on improving my chops one design problem at a time.",
           },
         ],
+
         nav: [
           {
             id: "1",
@@ -38,6 +61,7 @@ const spanishData = [
             link: "Say Hello",
           },
         ],
+
         myWork: [
           {
             id: "1",
@@ -46,6 +70,7 @@ const spanishData = [
               "Here are a few past design projects I've worked on. Want to know me?",
           },
         ],
+
         heroSection: [
           {
             id: "1",

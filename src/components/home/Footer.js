@@ -10,7 +10,7 @@ function Footer() {
   return (
     <>
       {data.flatMap((constant) =>
-        constant.contact.flatMap((contact) =>
+        constant.home.flatMap((contact) =>
           contact.footer.map((item) => (
             <footer className={styles.container} key={item.id}>
               <img

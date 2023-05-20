@@ -1,14 +1,20 @@
+import { useContext } from "react";
+import { LanguageContext } from "../../context/LanguageContext";
 import logo from "../../assets/img/avatar/avatar.svg";
 import styles from "./contactHero.module.css";
 
 function ContactHero() {
-  return (
-    <section className={styles.heroContainer}>
-      <img src={logo} alt="Designer avatar" className={styles.heroAvatar} />
-      <h1 className={styles.heroTitle}>
-        Thanks for taking the time to reach out. How can I help you today?
-      </h1>
-    </section>
+  const { data } = useContext(LanguageContext);
+
+  return data.flatMap((constant) =>
+    constant.contact.flatMap((contact) =>
+      contact.form.map((item) => (
+        <section className={styles.heroContainer} key={item.id}>
+          <img src={logo} alt="Designer avatar" className={styles.heroAvatar} />
+          <h1 className={styles.heroTitle}>{item.title}</h1>
+        </section>
+      ))
+    )
   );
 }
 
