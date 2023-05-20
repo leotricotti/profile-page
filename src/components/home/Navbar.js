@@ -18,46 +18,40 @@ function Navbar() {
     ? `${styles.line}  ${styles.isActive}`
     : `${styles.line}`;
 
-  return (
-    <>
-      {data.map((constant) =>
-        constant.contact.flatMap((contact) =>
-          contact.nav.map((item) => (
-            <nav className={styles.navContainer} key={item.id}>
-              <NavLink to="/">
-                <img
-                  src={logo}
-                  alt="Designer logo"
-                  className={styles.navBarLogo}
-                />
-              </NavLink>
+  console.log(data);
 
-              <div
-                className={
-                  toggle
-                    ? `${styles.container}`
-                    : `${styles.container}  ${styles.active}`
-                }
-              >
-                <p className={styles.welcome}>{item.text}</p>
-                <button className={styles.btn}>
-                  <NavLink to={"contact"}>{item.link}</NavLink>
-                </button>
-              </div>
+  return data.map((constant) =>
+    constant.home.flatMap((home) =>
+      home.nav.map((item) => (
+        <nav className={styles.navContainer} key={item.id}>
+          <NavLink to="/">
+            <img src={logo} alt="Designer logo" className={styles.navBarLogo} />
+          </NavLink>
 
-              <div
-                className={styles.navToggle}
-                onClick={() => setIsActive(!isActive)}
-              >
-                <div className={className}></div>
-                <div className={className}></div>
-                <div className={className}></div>
-              </div>
-            </nav>
-          ))
-        )
-      )}
-    </>
+          <div
+            className={
+              toggle
+                ? `${styles.container}`
+                : `${styles.container}  ${styles.active}`
+            }
+          >
+            <p className={styles.welcome}>{item.text}</p>
+            <button className={styles.btn}>
+              <NavLink to={"contact"}>{item.link}</NavLink>
+            </button>
+          </div>
+
+          <div
+            className={styles.navToggle}
+            onClick={() => setIsActive(!isActive)}
+          >
+            <div className={className}></div>
+            <div className={className}></div>
+            <div className={className}></div>
+          </div>
+        </nav>
+      ))
+    )
   );
 }
 

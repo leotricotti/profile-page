@@ -7,34 +7,27 @@ import styles from "./heroSection.module.css";
 function HeroSection() {
   const { data } = useContext(LanguageContext);
 
-  return (
-    <>
-      {data.flatMap((constant) =>
-        constant.contact.flatMap((contact) =>
-          contact.footer.map((item) => (
-            <section className={styles.heroSectionContainer} key={item.id}>
-              <div className={styles.heroBody}>
-                <h1 className={styles.title}>{item.titile}</h1>
-                <p className={styles.subtitle}>{item.subtitle}</p>
-                <img
-                  src={logo}
-                  alt="Developer avatar"
-                  className={styles.avatar}
-                />
-              </div>
+  return data.flatMap((constant) =>
+    constant.home.flatMap((home) =>
+      home.footer.map((item) => (
+        <section className={styles.heroSectionContainer} key={item.id}>
+          <div className={styles.heroBody}>
+            <h1 className={styles.title}>{item.titile}</h1>
+            <p className={styles.subtitle}>{item.subtitle}</p>
+            <img src={logo} alt="Developer avatar" className={styles.avatar} />
+          </div>
 
-              <div className={styles.footerContainer}>
-                <img
-                  src={footerImg}
-                  alt="Devices ilustration"
-                  className={styles.footerImg}
-                />
-              </div>
-            </section>
-          ))
-        )
-      )}
-    </>
+          <div className={styles.footerContainer}>
+            <img
+              src={footerImg}
+              alt="Devices ilustration"
+              className={styles.footerImg}
+            />
+          </div>
+        </section>
+      ))
+    )
   );
 }
+
 export default HeroSection;

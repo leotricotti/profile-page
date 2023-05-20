@@ -1,4 +1,4 @@
-const spanishData = [
+const englishData = [
   {
     contact: [
       {
@@ -103,15 +103,24 @@ const spanishData = [
         habilityList: "HTML, CSS, Sass, Git, JavaScript, React",
         tools: "Dev Tools:",
         toolsList: [
-          "Atom",
-          "Bitbucket",
+          "JavaScript",
+          "React",
+          "Redux",
+          "Redux-Toolkit",
+          "Next",
+          "Express",
+          "JQuery",
+          "TypeScript",
+          "Node",
+          "HTML",
+          "CSS",
+          "Sass",
+          "Git",
+          "GitLab",
+          "Styled-Components",
+          " Material-UI",
           "Bootstrap",
-          "Bulma",
-          "Codeki",
-          "Github",
-          "Surge",
-          "Terminal",
-          "Vercel",
+          "Tailwind",
         ],
       },
       {
@@ -145,4 +154,4 @@ const spanishData = [
   },
 ];
 
-export default spanishData;
+export default englishData;

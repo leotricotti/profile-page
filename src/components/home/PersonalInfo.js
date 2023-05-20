@@ -5,19 +5,15 @@ import styles from "./personalSection.module.css";
 function PersonalInfo() {
   const { data } = useContext(LanguageContext);
 
-  return (
-    <>
-      {data.map((constant) =>
-        constant.contact.flatMap((contact) =>
-          contact.personalInfo.map((item) => (
-            <div className={styles.sectionContainer} key={item.id}>
-              <h2 className={styles.infoTitle}>{item.title}</h2>
-              <p className={styles.personalInfo}>{item.text}</p>
-            </div>
-          ))
-        )
-      )}
-    </>
+  return data.map((constant) =>
+    constant.home.flatMap((home) =>
+      home.personalInfo.map((item) => (
+        <div className={styles.sectionContainer} key={item.id}>
+          <h2 className={styles.infoTitle}>{item.title}</h2>
+          <p className={styles.personalInfo}>{item.text}</p>
+        </div>
+      ))
+    )
   );
 }
 
