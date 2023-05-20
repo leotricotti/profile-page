@@ -61,6 +61,7 @@ function ContactForm() {
               name="name"
               className={styles.formInput}
               onChange={handleInputChange}
+              required
             />
           </div>
           <div className={styles.field}>
@@ -70,6 +71,7 @@ function ContactForm() {
               name="email"
               className={styles.formInput}
               onChange={handleInputChange}
+              required
             />
           </div>
         </div>
@@ -80,6 +82,7 @@ function ContactForm() {
             rows={7}
             className={styles.formInput}
             onChange={handleInputChange}
+            required
           />
         </div>
         <button className={styles.submit} type="submit">
