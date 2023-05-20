@@ -1,5 +1,5 @@
 import { createContext, useEffect, useState } from "react";
-import { englishData } from "../locales/englishData";
+import englishData from "../locales/englishData";
 import { spanishData } from "../locales/spanishData";
 
 export const LanguageContext = createContext();
@@ -26,7 +26,7 @@ export const LanguageProvider = ({ children }) => {
   const value = { data, language, setLanguage, handleLanguageChange };
 
   return (
-    <LanguageContext.Provider value={{ value }}>
+    <LanguageContext.Provider value={value}>
       {children}
     </LanguageContext.Provider>
   );

@@ -1,4 +1,4 @@
-const skils = [
+const spanishData = [
   {
     id: "1",
     icon: "../img/icons/developer.webp",
@@ -53,4 +53,4 @@ const skils = [
   },
 ];
 
-export default skils;
+export default spanishData;

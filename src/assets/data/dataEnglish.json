@@ -1,4 +1,4 @@
-const spanishData = [
+const data = [
   {
     skils: [
       {
@@ -52,4 +52,5 @@ const spanishData = [
   },
 ];
 
-export default spanishData;
+const jsObject = data[0].skils;
+console.log(jsObject);
