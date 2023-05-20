@@ -1,4 +1,4 @@
-import styles from "../css/skilsSection.module.css";
+import styles from "./skilsSection.module.css";
 
 function SkilsSection({ data }) {
   return (

@@ -1,7 +1,7 @@
-import logo from "../assets/img/logo/logo.webp";
+import logo from "../../assets/img/logo/logo.webp";
 import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
-import styles from "../css/navBar.module.css";
+import styles from "./navBar.module.css";
 
 function NavBar() {
   const [toggle, setToggle] = useState(false);

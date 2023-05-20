@@ -1,4 +1,4 @@
-import styles from "../css/personalSection.module.css";
+import styles from "./personalSection.module.css";
 
 function PersonalInfo() {
   return (

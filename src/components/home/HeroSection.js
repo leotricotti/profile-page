@@ -1,6 +1,6 @@
-import logo from "../assets/img/avatar/avatar.svg";
-import footerImg from "../assets/img/hero-devices/hero-devices.svg";
-import styles from "../css/heroSection.module.css";
+import logo from "../../assets/img/avatar/avatar.svg";
+import footerImg from "../../assets/img/hero-devices/hero-devices.svg";
+import styles from "./heroSection.module.css";
 
 function HeroSection() {
   return (

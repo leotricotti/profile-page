@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import styles from "../css/myWork.module.css";
+import styles from "./myWork.module.css";
 
 function MyWork() {
   return (

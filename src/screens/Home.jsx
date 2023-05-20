@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
-import HeroSection from "../components/HeroSection";
-import NavBar from "../components/NavBar";
-import PersonalInfo from "../components/PersonalInfo";
-import SkilsSection from "../components/SkillsSection";
-import MyWork from "../components/MyWork";
-import Footer from "../components/Footer";
+import HeroSection from "../components/home/HeroSection";
+import NavBar from "../components/home/NavBar";
+import PersonalInfo from "../components/home/PersonalInfo";
+import SkilsSection from "../components/home/SkillsSection";
+import MyWork from "../components/home/MyWork";
+import Footer from "../components/home/Footer";
 import Spinner from "../components/Spinner";
-import data from "../assets/data/data";
-import styles from "../css/home.module.css";
+import data from "../assets/data/dataEnglish";
+import styles from "./home.module.css";
 
 function Home() {
   const skilsData = data;
@@ -27,11 +27,11 @@ function Home() {
   return isLoading ? (
     <Spinner />
   ) : (
-    <main className={styles.homeContainer}> 
+    <main className={styles.homeContainer}>
       <NavBar />
       <HeroSection />
       <PersonalInfo />
-      <SkilsSection data={skilsData}/>
+      <SkilsSection data={skilsData} />
       <MyWork />
       <Footer />
     </main>
