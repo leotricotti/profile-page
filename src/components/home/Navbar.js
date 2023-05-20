@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { LanguageContext } from "../../context/LanguageContext";
 import logo from "../../assets/img/logo/logo.webp";
 import { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import styles from "./navBar.module.css";
 
 function Navbar() {
@@ -18,15 +18,13 @@ function Navbar() {
     ? `${styles.line}  ${styles.isActive}`
     : `${styles.line}`;
 
-  console.log(data);
-
   return data.map((constant) =>
     constant.home.flatMap((home) =>
       home.nav.map((item) => (
         <nav className={styles.navContainer} key={item.id}>
-          <NavLink to="/">
+          <Link to="/">
             <img src={logo} alt="Designer logo" className={styles.navBarLogo} />
-          </NavLink>
+          </Link>
 
           <div
             className={
@@ -37,7 +35,7 @@ function Navbar() {
           >
             <p className={styles.welcome}>{item.text}</p>
             <button className={styles.btn}>
-              <NavLink to={"contact"}>{item.link}</NavLink>
+              <Link to={"contact"}>{item.link}</Link>
             </button>
           </div>
 
@@ -49,6 +47,11 @@ function Navbar() {
             <div className={className}></div>
             <div className={className}></div>
           </div>
+          <ul>
+            <li>
+              <button>{item.flag}</button>
+            </li>
+          </ul>
         </nav>
       ))
     )

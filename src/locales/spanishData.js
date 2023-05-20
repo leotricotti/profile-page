@@ -96,6 +96,7 @@ const spanishData = [
     skils: [
       {
         id: "1",
+        icon: require("../assets/img/icons/developer.webp"),
         title: "Desarrollador Frontend",
         desc: "Me gusta codificar cosas desde cero y disfruto dar vida a ideas en el navegador.",
         hability: "Lenguajes que hablo:",
@@ -124,6 +125,7 @@ const spanishData = [
       },
       {
         id: "2",
+        icon: require("../assets/img/icons/designer.webp"),
         title: "Diseñador",
         desc: "Valoro la estructura simple del contenido, los patrones de diseño limpios y las interacciones reflexivas.",
         hability: "Cosas que disfruto diseñar:",
@@ -140,6 +142,7 @@ const spanishData = [
       },
       {
         id: "3",
+        icon: require("../assets/img/icons/artist.webp"),
         title: "Artista",
         desc: "Realmente me importa la gente y amo ayudar a otros artistas a trabajar en su arte.",
         hability: "Experiencias de las que saco provecho:",
