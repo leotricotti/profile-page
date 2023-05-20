@@ -1,7 +1,7 @@
 import { useEffect, useState, useContext } from "react";
 import { LanguageContext } from "../context/LanguageContext";
 import HeroSection from "../components/home/HeroSection";
-import NavBar from "../components/home/NavBar";
+import Navbar from "../components/home/Navbar";
 import PersonalInfo from "../components/home/PersonalInfo";
 import SkilsSection from "../components/home/SkillsSection";
 import MyWork from "../components/home/MyWork";
@@ -30,7 +30,7 @@ function Home() {
     <Spinner />
   ) : (
     <main className={styles.homeContainer}>
-      <NavBar />
+      <Navbar />
       <HeroSection />
       <PersonalInfo />
       <SkilsSection data={data} />

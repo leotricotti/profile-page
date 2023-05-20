@@ -24,9 +24,9 @@
   width: 1rem;
   height: 1px;
   background-color: var(--clr-primary);
-  margin-bottom: .23rem;
+  margin-bottom: 0.23rem;
   transform-origin: center;
-  transition: all .2s ease;
+  transition: all 0.2s ease;
 }
 
 .line:nth-child(1).isActive {
@@ -48,13 +48,13 @@
   flex-direction: column;
   opacity: 0;
   height: 0;
-  transition: all .2s ease-in;
+  transition: all 0.2s ease-in;
 }
 
 .container.active {
   height: 8rem;
   opacity: 1;
-  transition: all .2s ease-in;
+  transition: all 0.2s ease-in;
 }
 
 .welcome {
@@ -67,16 +67,16 @@
 
 .btn {
   background-color: transparent;
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
   border: 2px solid var(--clr-accent);
   border-radius: 9999px;
-  transition: all .2s ease-in;
+  transition: all 0.2s ease-in;
   cursor: pointer;
   position: relative;
   z-index: 5;
 }
 
-.btn>a {
+.btn > a {
   color: var(--clr-accent);
   text-decoration: none;
   font-family: var(--ff-primary);
@@ -92,7 +92,7 @@
   color: var(--clr-white);
 }
 
-@media(min-width: 768px) {
+@media (min-width: 768px) {
   .navContainer {
     padding-left: 2rem;
   }
@@ -106,7 +106,7 @@
   }
 }
 
-@media(min-width: 1024px) {
+@media (min-width: 1024px) {
   .navContainer {
     top: 2rem;
     max-width: 1200px;

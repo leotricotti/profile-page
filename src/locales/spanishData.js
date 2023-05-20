@@ -1,6 +1,9 @@
-export const spanishData = [
+const spanishData = [
   {
-    skills: [
+    footer: [{}],
+  },
+  {
+    skils: [
       {
         id: "1",
         icon: "../img/icons/developer.webp",
@@ -56,3 +59,5 @@ export const spanishData = [
     ],
   },
 ];
+
+export default spanishData;

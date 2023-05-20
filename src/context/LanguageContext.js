@@ -1,6 +1,6 @@
 import { createContext, useEffect, useState } from "react";
 import englishData from "../locales/englishData";
-import { spanishData } from "../locales/spanishData";
+import spanishData from "../locales/spanishData";
 
 export const LanguageContext = createContext();
 

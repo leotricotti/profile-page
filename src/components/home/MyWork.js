@@ -1,17 +1,27 @@
+import { useContext } from "react";
+import { LanguageContext } from "../../context/LanguageContext";
 import { NavLink } from "react-router-dom";
 import styles from "./myWork.module.css";
 
 function MyWork() {
+  const { data } = useContext(LanguageContext);
+
   return (
-    <section className={styles.myWorkContainer}>
-      <h3 className={styles.myWorkTitle}>My Recent Work</h3>
-      <p className={styles.myWorkText}>
-        Here are a few past design projects I've worked on. Want to know me?
-      </p>
-      <NavLink to={"/contact"} className={styles.link}>
-        Email me.
-      </NavLink>
-    </section>
+    <>
+      {data.map((constant) =>
+        constant.contact.flatMap((contact) =>
+          contact.myWork.map((item) => (
+            <section className={styles.myWorkContainer} ket={item.id}>
+              <h3 className={styles.myWorkTitle}>{item.title}</h3>
+              <p className={styles.myWorkText}>{item.subtitle}</p>
+              <NavLink to={"/contact"} className={styles.link}>
+                Email me.
+              </NavLink>
+            </section>
+          ))
+        )
+      )}
+    </>
   );
 }
 
