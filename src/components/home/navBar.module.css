@@ -4,14 +4,25 @@
 }
 
 .navToggle {
-  width: 1rem;
-  height: 1rem;
+  width: 2rem;
+  height: 2rem;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   top: 3.3rem;
   right: 2rem;
   cursor: pointer;
   margin: 0 0.2rem 0;
   z-index: 100;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  border-radius: 0.25rem;
+}
+
+.navToggle:hover {
+  background-color: rgba(0, 0, 0, 0.04);
 }
 
 .line {
@@ -23,8 +34,12 @@
   transition: all 0.2s ease;
 }
 
+.line:last-child {
+  margin-bottom: 0;
+}
+
 .line:nth-child(1).isActive {
-  transform: translateY(0px) rotate(45deg);
+  transform: translateY(3px) rotate(45deg);
 }
 
 .line:nth-child(2).isActive {
@@ -32,7 +47,7 @@
 }
 
 .line:nth-child(3).isActive {
-  transform: translateY(-5px) rotate(-45deg);
+  transform: translateY(-2px) rotate(-45deg);
 }
 
 .container {

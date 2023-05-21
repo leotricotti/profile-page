@@ -1,6 +1,5 @@
 import { useContext } from "react";
 import { LanguageContext } from "../../context/LanguageContext";
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import spanishFlag from "../../assets/img/flags/spanish.jpg";
 import englishFlag from "../../assets/img/flags/english.jpg";
@@ -8,11 +7,6 @@ import styles from "./navBar.module.css";
 
 function Navbar({ toggle, setToggle }) {
   const { data } = useContext(LanguageContext);
-  const [isActive, setIsActive] = useState(false);
-
-  let className = isActive
-    ? `${styles.line}  ${styles.isActive}`
-    : `${styles.line}`;
 
   return data.map((constant) =>
     constant.home.flatMap((home) =>
@@ -26,7 +20,9 @@ function Navbar({ toggle, setToggle }) {
             <ul className={styles.languages}>
               <li className={styles.flagContainer}>
                 <button className={styles.curriculum}>
-                  <Link to={item.cv}>{item.cvText}</Link>
+                  <a href={item.cv} download={item.cv}>
+                    {item.cvText}
+                  </a>
                 </button>
 
                 <button className={styles.flag}>
@@ -43,9 +39,15 @@ function Navbar({ toggle, setToggle }) {
             </ul>
           </div>
           <div className={styles.navToggle} onClick={() => setToggle(!toggle)}>
-            <div className={className}></div>
-            <div className={className}></div>
-            <div className={className}></div>
+            <div
+              className={`${styles.line} ${toggle ? styles.isActive : ""}`}
+            ></div>
+            <div
+              className={`${styles.line} ${toggle ? styles.isActive : ""}`}
+            ></div>
+            <div
+              className={`${styles.line} ${toggle ? styles.isActive : ""}`}
+            ></div>
           </div>
         </nav>
       ))

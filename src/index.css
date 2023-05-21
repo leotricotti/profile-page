@@ -21,6 +21,7 @@ Variables
   --clr-icon: hsl(160, 76%, 64%);
   --clr-white: hsl(0, 0%, 100%);
   --clr-border: hsl(220, 56%, 94%);
+  --clr-toggleActive: hsl(220, 56%, 74%);
   --clr-formText: hsla(220, 27%, 22%, 0.65);
   --ff-primary: "Nunito", sans-serif;
   --ff-secondary: "Exo", sans-serif;
