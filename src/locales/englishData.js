@@ -71,7 +71,7 @@ const englishData = [
           },
         ],
 
-        heroSection: [
+        hero: [
           {
             id: "1",
             title: "Frontend Developer, Designer & Artist",

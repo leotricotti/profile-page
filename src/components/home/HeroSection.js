@@ -9,10 +9,10 @@ function HeroSection() {
 
   return data.flatMap((constant) =>
     constant.home.flatMap((home) =>
-      home.footer.map((item) => (
+      home.hero.map((item) => (
         <section className={styles.heroSectionContainer} key={item.id}>
           <div className={styles.heroBody}>
-            <h1 className={styles.title}>{item.titile}</h1>
+            <h1 className={styles.title}>{item.title}</h1>
             <p className={styles.subtitle}>{item.subtitle}</p>
             <img src={logo} alt="Developer avatar" className={styles.avatar} />
           </div>
