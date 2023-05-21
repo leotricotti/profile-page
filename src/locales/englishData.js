@@ -60,7 +60,7 @@ const englishData = [
             text: "Welcome...",
             link: "Say Hello",
             cv: require("../assets/data/CV-EN.pdf"),
-            cvText: "Dowwnload my CV",
+            cvText: "Download my CV",
           },
         ],
 

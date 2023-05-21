@@ -17,24 +17,26 @@ function Navbar({ toggle, setToggle }) {
             <button className={styles.btn}>
               <Link to={"contact"}>{item.link}</Link>
             </button>
-            <ul className={styles.languages}>
-              <li className={styles.flagContainer}>
+            <ul className={styles.bannerContainer}>
+              <li className={styles.items}>
                 <button className={styles.curriculum}>
                   <a href={item.cv} download={item.cv}>
                     {item.cvText}
                   </a>
                 </button>
-
-                <button className={styles.flag}>
-                  <img
-                    src={spanishFlag}
-                    alt="Spanish flag"
-                    className={styles.image}
-                  />
-                </button>
-                <button className={styles.flag}>
-                  <img src={englishFlag} alt="English flag" />
-                </button>
+                <div className={styles.flagContainer}>
+                  <button className={styles.flag}>
+                    <img
+                      src={spanishFlag}
+                      alt="Spanish flag"
+                      className={styles.image}
+                    />
+                  </button>
+                  <span className={styles.separator}></span>
+                  <button className={styles.flag}>
+                    <img src={englishFlag} alt="English flag" />
+                  </button>
+                </div>
               </li>
             </ul>
           </div>
