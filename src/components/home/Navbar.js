@@ -1,6 +1,5 @@
 import { useContext } from "react";
 import { LanguageContext } from "../../context/LanguageContext";
-import logo from "../../assets/img/logo/logo.webp";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import spanishFlag from "../../assets/img/flags/spanish.jpg";
@@ -35,8 +34,21 @@ function Navbar() {
             <button className={styles.btn}>
               <Link to={"contact"}>{item.link}</Link>
             </button>
+            <ul className={styles.languages}>
+              <li className={styles.flagContainer}>
+                <button className={styles.flag}>
+                  <img
+                    src={spanishFlag}
+                    alt="Spanish flag"
+                    className={styles.image}
+                  />
+                </button>
+                <button className={styles.flag}>
+                  <img src={englishFlag} alt="English flag" />
+                </button>
+              </li>
+            </ul>
           </div>
-
           <div
             className={styles.navToggle}
             onClick={() => setIsActive(!isActive)}
@@ -45,20 +57,6 @@ function Navbar() {
             <div className={className}></div>
             <div className={className}></div>
           </div>
-          <ul className={styles.languages}>
-            <li className={styles.flagContainer}>
-              <button className={styles.flag}>
-                <img
-                  src={spanishFlag}
-                  alt="Spanish flag"
-                  className={styles.image}
-                />
-              </button>
-              <button className={styles.flag}>
-                <img src={englishFlag} alt="English flag" />
-              </button>
-            </li>
-          </ul>
         </nav>
       ))
     )
