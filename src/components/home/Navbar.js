@@ -47,9 +47,14 @@ function Navbar() {
             <div className={className}></div>
             <div className={className}></div>
           </div>
-          <ul>
-            <li>
-              <button>{item.flag}</button>
+          <ul className={styles.languages}>
+            <li className={styles.flagContainer}>
+              <button className={styles.flag}>
+                <img src="" alt="Argentine flag" />
+              </button>
+              <button className={styles.flag}>
+                <img src="" alt="English flag" />
+              </button>
             </li>
           </ul>
         </nav>
