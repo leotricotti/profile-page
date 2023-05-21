@@ -3,6 +3,8 @@ import { LanguageContext } from "../../context/LanguageContext";
 import logo from "../../assets/img/logo/logo.webp";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import spanishFlag from "../../assets/img/flags/spanish.jpg";
+import englishFlag from "../../assets/img/flags/english.jpg";
 import styles from "./navBar.module.css";
 
 function Navbar() {
@@ -22,10 +24,6 @@ function Navbar() {
     constant.home.flatMap((home) =>
       home.nav.map((item) => (
         <nav className={styles.navContainer} key={item.id}>
-          <Link to="/">
-            <img src={logo} alt="Designer logo" className={styles.navBarLogo} />
-          </Link>
-
           <div
             className={
               toggle
@@ -50,10 +48,14 @@ function Navbar() {
           <ul className={styles.languages}>
             <li className={styles.flagContainer}>
               <button className={styles.flag}>
-                <img src="" alt="Argentine flag" />
+                <img
+                  src={spanishFlag}
+                  alt="Spanish flag"
+                  className={styles.image}
+                />
               </button>
               <button className={styles.flag}>
-                <img src="" alt="English flag" />
+                <img src={englishFlag} alt="English flag" />
               </button>
             </li>
           </ul>
