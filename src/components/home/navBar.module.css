@@ -44,17 +44,16 @@
   opacity: 0;
   transform: translateY(-50%);
   transition: all 0.2s ease-in;
-  position: relative;
-  z-index: 10;
 }
 
-.container.active {
-  transform: translateY(0);
+.active {
+  transform: translateY(40%);
   opacity: 1;
   transition: all 0.2s ease-in;
 }
 
 .welcome {
+  display: inline;
   color: var(--clr-primary);
   font-family: var(--ff-primary);
   font-weight: var(--fw-semibold);
@@ -62,6 +61,7 @@
 }
 
 .btn {
+  display: inline;
   background-color: transparent;
   padding: 0.5rem 1rem;
   border: 2px solid var(--clr-accent);
@@ -100,7 +100,7 @@
 }
 
 .flag:first-child::after {
-  display: block;
+  display: inline;
   content: "";
   width: 1px;
   height: 1rem;
@@ -127,9 +127,15 @@
   .container {
     opacity: 1;
     flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    top: -2rem;
   }
 
   .languages {
     position: absolute;
+    top: -1.5rem;
+    right: 1.8rem;
   }
 }

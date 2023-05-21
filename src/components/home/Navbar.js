@@ -1,19 +1,14 @@
 import { useContext } from "react";
 import { LanguageContext } from "../../context/LanguageContext";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import spanishFlag from "../../assets/img/flags/spanish.jpg";
 import englishFlag from "../../assets/img/flags/english.jpg";
 import styles from "./navBar.module.css";
 
-function Navbar() {
+function Navbar({ toggle, setToggle }) {
   const { data } = useContext(LanguageContext);
-  const [toggle, setToggle] = useState(false);
   const [isActive, setIsActive] = useState(false);
-
-  useEffect(() => {
-    setToggle(() => !isActive);
-  }, [isActive]);
 
   let className = isActive
     ? `${styles.line}  ${styles.isActive}`
@@ -23,19 +18,17 @@ function Navbar() {
     constant.home.flatMap((home) =>
       home.nav.map((item) => (
         <nav className={styles.navContainer} key={item.id}>
-          <div
-            className={
-              toggle
-                ? `${styles.container}`
-                : `${styles.container}  ${styles.active}`
-            }
-          >
+          <div className={`${styles.container} ${toggle ? styles.active : ""}`}>
             <p className={styles.welcome}>{item.text}</p>
             <button className={styles.btn}>
               <Link to={"contact"}>{item.link}</Link>
             </button>
             <ul className={styles.languages}>
               <li className={styles.flagContainer}>
+                <button className={styles.curriculum}>
+                  <Link to={item.cv}>{item.cvText}</Link>
+                </button>
+
                 <button className={styles.flag}>
                   <img
                     src={spanishFlag}
@@ -49,10 +42,7 @@ function Navbar() {
               </li>
             </ul>
           </div>
-          <div
-            className={styles.navToggle}
-            onClick={() => setIsActive(!isActive)}
-          >
+          <div className={styles.navToggle} onClick={() => setToggle(!toggle)}>
             <div className={className}></div>
             <div className={className}></div>
             <div className={className}></div>
