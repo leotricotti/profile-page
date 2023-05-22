@@ -6,7 +6,7 @@ import englishFlag from "../../assets/img/flags/english.jpg";
 import styles from "./navBar.module.css";
 
 function Navbar({ toggle, setToggle }) {
-  const { data } = useContext(LanguageContext);
+  const { data, handleLanguageChange } = useContext(LanguageContext);
   const [showFlag, setShowFlag] = useState(false);
 
   return data.map((constant) =>
@@ -37,7 +37,10 @@ function Navbar({ toggle, setToggle }) {
                     showFlag ? styles.active : ""
                   }`}
                 >
-                  <button className={styles.flag}>
+                  <button
+                    className={styles.flag}
+                    onClick={() => handleLanguageChange("es")}
+                  >
                     <img
                       src={spanishFlag}
                       alt="Spanish flag"
@@ -45,7 +48,10 @@ function Navbar({ toggle, setToggle }) {
                     />
                   </button>
                   <span className={styles.separator}></span>
-                  <button className={styles.flag}>
+                  <button
+                    className={styles.flag}
+                    onClick={() => handleLanguageChange("en")}
+                  >
                     <img src={englishFlag} alt="English flag" />
                   </button>
                 </div>

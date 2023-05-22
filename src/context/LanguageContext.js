@@ -19,8 +19,8 @@ export const LanguageProvider = ({ children }) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [language]);
 
-  const handleLanguageChange = () => {
-    setLanguage(language === "en" ? "es" : "en");
+  const handleLanguageChange = (lang) => {
+    setLanguage(lang);
   };
 
   const value = { data, language, setLanguage, handleLanguageChange };
