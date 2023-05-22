@@ -62,16 +62,9 @@ button {
   cursor: pointer;
 }
 
-html {
+body {
   background-color: #ffffff;
   font-size: 16px;
   min-width: 300px;
-  overflow-x: hidden;
-  overflow-y: scroll;
-  text-rendering: optimizeLegibility;
-  text-size-adjust: 100%;
-}
-
-body {
   position: relative;
 }
