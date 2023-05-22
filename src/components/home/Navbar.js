@@ -6,8 +6,16 @@ import englishFlag from "../../assets/img/flags/english.jpg";
 import styles from "./navBar.module.css";
 
 function Navbar({ toggle, setToggle }) {
-  const { data, handleLanguageChange } = useContext(LanguageContext);
+  const { data, setLanguage, setIsLoading } = useContext(LanguageContext);
   const [showFlag, setShowFlag] = useState(false);
+
+  const languageChanger = (language) => {
+    setTimeout(() => {
+      setLanguage(language);
+      setIsLoading(false);
+    }, 1500);
+    setIsLoading(true);
+  };
 
   return data.map((constant) =>
     constant.home.flatMap((home) =>
@@ -39,18 +47,14 @@ function Navbar({ toggle, setToggle }) {
                 >
                   <button
                     className={styles.flag}
-                    onClick={() => handleLanguageChange("es")}
+                    onClick={() => languageChanger("es")}
                   >
-                    <img
-                      src={spanishFlag}
-                      alt="Spanish flag"
-                      className={styles.image}
-                    />
+                    <img src={spanishFlag} alt="Spanish flag" />
                   </button>
                   <span className={styles.separator}></span>
                   <button
                     className={styles.flag}
-                    onClick={() => handleLanguageChange("en")}
+                    onClick={() => languageChanger("en")}
                   >
                     <img src={englishFlag} alt="English flag" />
                   </button>

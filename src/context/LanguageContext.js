@@ -8,6 +8,7 @@ export const LanguageProvider = ({ children }) => {
   const esData = spanishData;
   const enData = englishData;
   const [language, setLanguage] = useState("es");
+  const [isLoading, setIsLoading] = useState(true);
   const [data, setData] = useState([]);
 
   const handleDataChange = (lang) => {
@@ -19,11 +20,14 @@ export const LanguageProvider = ({ children }) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [language]);
 
-  const handleLanguageChange = (lang) => {
-    setLanguage(lang);
-  };
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 1500);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
-  const value = { data, language, setLanguage, handleLanguageChange };
+  const value = { data, language, setLanguage, isLoading, setIsLoading };
 
   return (
     <LanguageContext.Provider value={value}>

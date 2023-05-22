@@ -15,7 +15,7 @@ function Contact() {
   useEffect(() => {
     setTimeout(() => {
       setIsloading(false);
-    }, 2000);
+    }, 1500);
   }, []);
 
   return isLoading ? (

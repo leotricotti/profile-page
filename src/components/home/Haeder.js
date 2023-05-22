@@ -3,7 +3,7 @@ import Navbar from "./Navbar";
 import Logo from "./Logo";
 import styles from "./header.module.css";
 
-function Header() {
+function Header({ setIsloading }) {
   const [toggle, setToggle] = useState(false);
 
   useEffect(() => {
@@ -15,7 +15,11 @@ function Header() {
       className={`${styles.headerContainer} ${toggle ? styles.isActive : ""}`}
     >
       <Logo />
-      <Navbar toggle={toggle} setToggle={setToggle} />
+      <Navbar
+        toggle={toggle}
+        setToggle={setToggle}
+        setIsloading={setIsloading}
+      />
     </header>
   );
 }

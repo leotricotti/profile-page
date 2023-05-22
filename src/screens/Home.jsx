@@ -1,4 +1,4 @@
-import { useEffect, useState, useContext } from "react";
+import { useEffect, useContext } from "react";
 import { LanguageContext } from "../context/LanguageContext";
 import HeroSection from "../components/home/HeroSection";
 import Header from "../components/home/Haeder";
@@ -10,14 +10,7 @@ import Spinner from "../components/Spinner";
 import styles from "./home.module.css";
 
 function Home() {
-  const [isLoading, setIsLoading] = useState(true);
-  const { data } = useContext(LanguageContext);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 2000);
-  }, []);
+  const { data, isLoading, setIsLoading } = useContext(LanguageContext);
 
   useEffect(() => {
     document.title =
@@ -28,7 +21,7 @@ function Home() {
     <Spinner />
   ) : (
     <main className={styles.homeContainer}>
-      <Header />
+      <Header setIsLoading={setIsLoading} />
       <HeroSection />
       <PersonalInfo />
       <SkilsSection data={data} />
