@@ -1,57 +1,12 @@
-.navContainer {
+.navbarContainer {
   width: 100%;
   height: auto;
   background-color: var(--clr-white);
+  position: relative;
+  z-index: 9999;
 }
 
-.navToggle {
-  width: 2rem;
-  height: 2rem;
-  background-color: transparent;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: 2.6rem;
-  right: 2rem;
-  cursor: pointer;
-  margin: 0 0.2rem 0;
-  z-index: 100;
-  border: 1px solid rgba(0, 0, 0, 0.4);
-  border-radius: 0.25rem;
-}
-
-.navToggle:hover {
-  background-color: rgba(0, 0, 0, 0.04);
-}
-
-.line {
-  width: 1rem;
-  height: 1px;
-  background-color: var(--clr-primary);
-  margin-bottom: 0.23rem;
-  transform-origin: center;
-  transition: all 0.2s ease;
-}
-
-.line:last-child {
-  margin-bottom: 0;
-}
-
-.line:nth-child(1).isActive {
-  transform: translateY(3px) rotate(45deg);
-}
-
-.line:nth-child(2).isActive {
-  display: none;
-}
-
-.line:nth-child(3).isActive {
-  transform: translateY(-2px) rotate(-45deg);
-}
-
-.container {
+.navbar {
   width: 100%;
   height: 100vh;
   background-color: var(--clr-white);
@@ -61,7 +16,7 @@
   align-items: center;
   gap: 1rem;
   position: absolute;
-  top: 7rem;
+  top: 0;
   left: 0;
   z-index: 9999;
   padding: 3rem 0 0;
@@ -110,17 +65,16 @@
 }
 
 .bannerContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 100%;
+  height: auto;
 }
 
-.items {
+.bannerItems {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 0.8rem;
+  gap: 0.4rem;
 }
 
 .curriculum > a {
@@ -137,6 +91,24 @@
   text-decoration: underline;
 }
 
+.languageSelector {
+  width: auto;
+  height: auto;
+}
+
+.languageSelector > span {
+  color: var(--clr-accent);
+  font-family: var(--ff-primary);
+  font-weight: var(--fw-semibold);
+  font-size: 1rem;
+  transition: all 0.2s ease-in;
+  cursor: pointer;
+}
+
+.languageSelector > span:hover {
+  text-decoration: underline;
+}
+
 .flagContainer {
   display: flex;
   justify-content: center;
@@ -144,6 +116,14 @@
   gap: 0.5rem;
   position: relative;
   z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease-in;
+}
+
+.flagContainer.active {
+  opacity: 1;
+  visibility: visible;
 }
 
 .flag {
@@ -154,34 +134,92 @@
   cursor: pointer;
 }
 
-.separator {
-  width: 1px;
-  height: 1rem;
+.navToggle {
+  width: 2rem;
+  height: 2rem;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -3rem;
+  right: 2rem;
+  cursor: pointer;
+  margin: 0 0.2rem 0;
+  z-index: 100;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  border-radius: 0.25rem;
+}
+
+.navToggle:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+.line {
+  width: 1rem;
+  height: 1px;
   background-color: var(--clr-primary);
+  margin-bottom: 0.23rem;
+  transform-origin: center;
+  transition: all 0.2s ease;
+}
+
+.line:last-child {
+  margin-bottom: 0;
+}
+
+.line:nth-child(1).isActive {
+  transform: translateY(3px) rotate(45deg);
+}
+
+.line:nth-child(2).isActive {
+  display: none;
+}
+
+.line:nth-child(3).isActive {
+  transform: translateY(-2px) rotate(-45deg);
 }
 
 @media (min-width: 1024px) {
-  .navContainer {
+  .navbarContainer {
     max-width: 1200px;
-    margin: auto;
+    margin: 0 auto;
+  }
+
+  .navbar {
+    height: 2rem;
+    background-color: transparent;
+    opacity: 1;
+    flex-direction: row;
+    justify-content: flex-end;
+    top: 0;
+    left: -2rem;
+  }
+
+  .bannerContainer {
+    position: absolute;
+    top: -3rem;
+    right: -4rem;
+  }
+
+  .curriculum > a {
+    color: var(--clr-accent);
+  }
+
+  .separator {
+    display: block;
+    width: 1px;
+    height: 1rem;
+    background-color: var(--clr-accent);
+  }
+
+  .bannerItems {
+    justify-content: flex-end;
+    flex-direction: row;
   }
 
   .navToggle {
     display: none;
-  }
-
-  .container {
-    opacity: 1;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-    position: relative;
-    top: -2rem;
-  }
-
-  .languages {
-    position: absolute;
-    top: -1.5rem;
-    right: 1.8rem;
   }
 }
