@@ -87,7 +87,6 @@
 }
 
 .curriculum > a:hover {
-  color: var(--clr-accent);
   text-decoration: underline;
 }
 

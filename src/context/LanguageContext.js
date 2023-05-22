@@ -7,11 +7,11 @@ export const LanguageContext = createContext();
 export const LanguageProvider = ({ children }) => {
   const esData = spanishData;
   const enData = englishData;
-  const [language, setLanguage] = useState("en");
+  const [language, setLanguage] = useState("es");
   const [data, setData] = useState([]);
 
   const handleDataChange = (lang) => {
-    setData(lang === "en" ? enData : esData);
+    setData(lang === "es" ? esData : enData);
   };
 
   useEffect(() => {

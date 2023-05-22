@@ -74,7 +74,7 @@ const spanishData = [
           },
         ],
 
-        heroSection: [
+        hero: [
           {
             id: "1",
             title: "Desarrollador Frontend, Diseñador y Artista",
