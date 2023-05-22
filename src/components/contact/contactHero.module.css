@@ -1,6 +1,6 @@
 .heroContainer {
   width: 100%;
-  height: 13.5rem;
+  height: auto;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -21,11 +21,10 @@
   font-weight: var(--fw-regular);
   font-size: 1.8rem;
   text-align: center;
-  padding: 0 2rem;
-  margin-bottom: 1rem;
+  padding: 5rem 2rem;
 }
 
-@media(min-width: 768px) {
+@media (min-width: 768px) {
   .heroContainer {
     height: 23rem;
   }
@@ -38,7 +37,7 @@
   }
 }
 
-@media(min-width: 1024px) {
+@media (min-width: 1024px) {
   .heroTitle {
     font-size: 2.8rem;
   }
