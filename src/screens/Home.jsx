@@ -4,7 +4,6 @@ import HeroSection from "../components/home/HeroSection";
 import Header from "../components/home/Haeder";
 import PersonalInfo from "../components/home/PersonalInfo";
 import SkilsSection from "../components/home/SkillsSection";
-import MyWork from "../components/home/MyWork";
 import Footer from "../components/home/Footer";
 import Spinner from "../components/Spinner";
 import styles from "./home.module.css";
@@ -25,7 +24,6 @@ function Home() {
       <HeroSection />
       <PersonalInfo />
       <SkilsSection data={data} />
-      <MyWork />
       <Footer />
     </main>
   );
