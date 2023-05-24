@@ -30,15 +30,15 @@
 }
 
 .copyright,
-.copyright>span {
+.copyright > span {
   color: var(--clr-white);
   font-family: var(--ff-primary);
 }
 
-.copyright>span::before {
+.copyright > span::before {
   content: "\00a9";
   font-size: 1.5rem;
-  padding: 0 .2rem;
+  padding: 0 0.2rem;
 }
 
 .footer {
@@ -46,7 +46,7 @@
   align-items: center;
 }
 
-.footer>span {
+.footer > span {
   color: var(--clr-white);
   font-family: var(--ff-primary);
   line-height: 3;
@@ -56,7 +56,7 @@
   width: 5rem;
 }
 
-@media(min-width: 768px) {
+@media (min-width: 768px) {
   .grid {
     display: grid;
     grid-template-columns: 1fr 400px 1fr;
