@@ -7,7 +7,7 @@
 }
 
 .navbar {
-  width: 110%;
+  width: 100vw;
   height: 100vh;
   background-color: var(--clr-white);
   display: flex;
